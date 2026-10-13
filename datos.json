@@ -1,82 +1,82 @@
 [
-	{
-		"id": 1,
-		"titulo": "Disparo por carga múltiple",
-		"categoria": "Arma de Fuego",
-		"imagen": "img/rx-perdigones.jpg",
-		"descripcion": "Radiografía anteroposterior de tórax. Los estudiantes deben describir el patrón de dispersión de los perdigones según la distancia del disparo.",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	},
-	{
-		"id": 2,
-		"titulo": "Orificio de entrada en cráneo",
-		"categoria": "Arma de Fuego",
-		"imagen": "img/tc-craneo-bala.jpg",
-		"descripcion": "Reconstrucción 3D. Se observa orificio en hueso parietal. El equipo debe analizar las líneas de fractura radiantes.",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	},
-	{
-		"id": 3,
-		"titulo": "Fractura de Hueso Hioides",
-		"categoria": "Asfixia Mecánica",
-		"imagen": "img/rx-hioides.jpg",
-		"descripcion": "Radiografía lateral cervical. El equipo debe diferenciar este hallazgo entre una estrangulación manual y una ahorcadura.",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	},
-	{
-		"id": 4,
-		"titulo": "Fractura del Ahorcado",
-		"categoria": "Asfixia Mecánica",
-		"imagen": "img/rx-c2-ahorcado.jpg",
-		"descripcion": "Radiografía cervical. Se observa compromiso en C2. Describir el mecanismo de hiperextensión.",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	},
-	{
-		"id": 5,
-		"titulo": "Fractura por impacto de parachoques",
-		"categoria": "Suceso de Tránsito",
-		"imagen": "img/rx-tibia-parachoques.jpg",
-		"descripcion": "Radiografía de miembro inferior. El equipo debe relacionar la altura de la fractura con la cinemática del trauma en un atropellamiento.",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	},
-	{
-		"id": 6,
-		"titulo": "Rectificación Cervical Severa",
-		"categoria": "Suceso de Tránsito",
-		"imagen": "img/rx-cervical-latigazo.jpg",
-		"descripcion": "Pérdida de la lordosis fisiológica. Explicar el mecanismo de aceleración-desaceleración (latigazo).",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	},
-	{
-		"id": 7,
-		"titulo": "Herida contuso-cortante con indicio",
-		"categoria": "Arma Blanca",
-		"imagen": "img/rx-radio-cuchillo.jpg",
-		"descripcion": "Corte óseo lineal en el radio con cuerpo extraño opaco. Detallar el principio de intercambio y preservación del indicio.",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	},
-	{
-		"id": 8,
-		"titulo": "Neumotórax por herida punzocortante",
-		"categoria": "Arma Blanca",
-		"imagen": "img/rx-torax-neumotorax.jpg",
-		"descripcion": "Radiografía de tórax. El equipo debe identificar los signos radiológicos del neumotórax y la trayectoria del arma.",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	},
-	{
-		"id": 9,
-		"titulo": "Fractura de cráneo por hundimiento",
-		"categoria": "Contusiones",
-		"imagen": "img/tc-craneo-hundimiento.jpg",
-		"descripcion": "Impacto por objeto contundente. Analizar el daño morfológico y las fracturas concéntricas.",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	},
-	{
-		"id": 10,
-		"titulo": "Trauma pélvico cerrado",
-		"categoria": "Delitos contra la integridad sexual",
-		"imagen": "img/rx-pelvis-contuso.jpg",
-		"descripcion": "Radiografía de pelvis. El equipo debe discutir la utilidad de los medios diagnósticos de imagen en estos delitos.",
-		"hallazgo_clave": "[Completar por el equipo pericial]"
-	}
+    {
+        "id": 1,
+        "titulo": "Disparo por carga múltiple",
+        "categoria": "Arma de Fuego",
+        "imagen": "img/rx-perdigones.jpg",
+        "descripcion": "Radiografía anteroposterior de tórax. Se observa un patrón de dispersión cónica de múltiples perdigones metálicos radiopacos, sin orificio de salida evidente.",
+        "hallazgo_clave": "El grado de dispersión de los perdigones permite al perito estimar la distancia del disparo. La retención de los proyectiles indica pérdida de energía cinética."
+    },
+    {
+        "id": 2,
+        "titulo": "Orificio de entrada en cráneo",
+        "categoria": "Arma de Fuego",
+        "imagen": "img/tc-craneo-bala.jpg",
+        "descripcion": "Reconstrucción 3D. Solución de continuidad en la tabla ósea del hueso parietal con líneas de fractura radiantes.",
+        "hallazgo_clave": "Presenta el característico bisel interno (cono truncado), que confirma fehacientemente que se trata de un orificio de entrada y no de salida."
+    },
+    {
+        "id": 3,
+        "titulo": "Fractura de Hueso Hioides",
+        "categoria": "Asfixia Mecánica",
+        "imagen": "img/rx-hioides.jpg",
+        "descripcion": "Radiografía lateral cervical. Solución de continuidad con desplazamiento en el asta mayor del hueso hioides.",
+        "hallazgo_clave": "Signo radiológico clásico y altamente sugestivo de compresión extrínseca del cuello, compatible con el mecanismo de estrangulación manual."
+    },
+    {
+        "id": 4,
+        "titulo": "Fractura del Ahorcado",
+        "categoria": "Asfixia Mecánica",
+        "imagen": "img/rx-c2-ahorcado.jpg",
+        "descripcion": "Radiografía cervical lateral. Espondilolistesis traumática del eje (C2) con fractura bilateral de la pars interarticularis.",
+        "hallazgo_clave": "Lesión patognomónica producida por un mecanismo de hiperextensión extrema y distracción repentina, típica de la ahorcadura judicial o caída con nudo submentoniano."
+    },
+    {
+        "id": 5,
+        "titulo": "Fractura por impacto de parachoques",
+        "categoria": "Suceso de Tránsito",
+        "imagen": "img/rx-tibia-parachoques.jpg",
+        "descripcion": "Radiografía anteroposterior de pierna. Fractura transversa o en cuña (comminuta) en el tercio medio de la tibia y el peroné.",
+        "hallazgo_clave": "Lesión contusa primaria característica del atropellamiento. La altura de la fractura ayuda a determinar el punto de impacto y relacionarlo con el tipo de vehículo."
+    },
+    {
+        "id": 6,
+        "titulo": "Rectificación Cervical Severa",
+        "categoria": "Suceso de Tránsito",
+        "imagen": "img/rx-cervical-latigazo.jpg",
+        "descripcion": "Pérdida total de la lordosis fisiológica de la columna cervical en vista lateral, sin luxaciones evidentes.",
+        "hallazgo_clave": "Refleja un espasmo muscular severo provocado por un mecanismo de aceleración-desaceleración brusca (síndrome del latigazo cervical), común en colisiones vehiculares por alcance."
+    },
+    {
+        "id": 7,
+        "titulo": "Herida contuso-cortante con indicio",
+        "categoria": "Arma Blanca",
+        "imagen": "img/rx-radio-cuchillo.jpg",
+        "descripcion": "Corte óseo lineal profundo en el hueso radio. Se visualiza un fragmento metálico radiopaco fuertemente enclavado en el tejido óseo.",
+        "hallazgo_clave": "Evidencia directa del Principio de Intercambio de Locard. El fragmento debe fijarse y preservarse radiológicamente antes de la extracción para la cadena de custodia."
+    },
+    {
+        "id": 8,
+        "titulo": "Neumotórax por herida punzocortante",
+        "categoria": "Arma Blanca",
+        "imagen": "img/rx-torax-neumotorax.jpg",
+        "descripcion": "Radiografía de tórax. Hiperclaridad pleural unilateral con colapso parcial del parénquima pulmonar y ausencia de trama vascular.",
+        "hallazgo_clave": "Indica la penetración de un arma blanca en la cavidad torácica, perforando la pleura y permitiendo la entrada de aire. Constituye una lesión que compromete la vida."
+    },
+    {
+        "id": 9,
+        "titulo": "Fractura de cráneo por hundimiento",
+        "categoria": "Contusiones",
+        "imagen": "img/tc-craneo-hundimiento.jpg",
+        "descripcion": "Tomografía de cráneo. Fragmentos de la bóveda craneal desplazados internamente hacia el parénquima cerebral con fracturas concéntricas.",
+        "hallazgo_clave": "Lesión producida por el impacto directo y de alta energía de un objeto contundente con una superficie de contacto relativamente pequeña (ej. martillo o bate)."
+    },
+    {
+        "id": 10,
+        "titulo": "Trauma pélvico cerrado",
+        "categoria": "Traumatología Especial",
+        "imagen": "img/rx-pelvis-contuso.jpg",
+        "descripcion": "Radiografía de pelvis. Fractura no desplazada de las ramas isquiopubianas, indicando trauma contuso focalizado.",
+        "hallazgo_clave": "Hallazgo vital para documentar objetivamente el daño morfológico subyacente en la investigación de delitos contra la integridad sexual con uso de fuerza física."
+    }
 ]
