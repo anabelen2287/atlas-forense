@@ -25,11 +25,11 @@
     },
     {
         "id": 4,
-        "titulo": "Fractura del Ahorcado",
-        "categoria": "Asfixia Mecánica",
-        "imagen": "img/rx-c2-ahorcado.jpg",
-        "descripcion": "Radiografía cervical lateral. Espondilolistesis traumática del eje (C2) con fractura bilateral de la pars interarticularis.",
-        "hallazgo_clave": "Lesión patognomónica producida por un mecanismo de hiperextensión extrema y distracción repentina, típica de la ahorcadura judicial o caída con nudo submentoniano."
+        "titulo": "Análisis Crítico: Alucinación de IA",
+        "categoria": "Arma de Fuego",
+        "imagen": "img/rx-craneo-proyectil.jpg",
+        "descripcion": "Radiografía lateral de cráneo. Proyectil compuesto visible en la región occipital. Evaluar la física del trayecto.",
+        "hallazgo_clave": "Inconsistencia pericial: La radiopacidad y estructura de la bala están intactas. En un escenario real, la dispersión de esquirlas seguiría un patrón cónico y el proyectil presentaría deformación."
     },
     {
         "id": 5,
@@ -51,15 +51,15 @@
         "id": 7,
         "titulo": "Herida contuso-cortante con indicio",
         "categoria": "Arma Blanca",
-        "imagen": "img/rx-radio-cuchillo.jpg",
-        "descripcion": "Corte óseo lineal profundo en el hueso radio. Se visualiza un fragmento metálico radiopaco fuertemente enclavado en el tejido óseo.",
+        "imagen": "img/rx-corto.jpg",
+        "descripcion": "Corte óseo lineal profundo. Se visualiza un fragmento metálico radiopaco fuertemente enclavado en el tejido óseo.",
         "hallazgo_clave": "Evidencia directa del Principio de Intercambio de Locard. El fragmento debe fijarse y preservarse radiológicamente antes de la extracción para la cadena de custodia."
     },
     {
         "id": 8,
         "titulo": "Neumotórax por herida punzocortante",
         "categoria": "Arma Blanca",
-        "imagen": "img/rx-torax-neumotorax.jpg",
+        "imagen": "img/rx-neumotorax.jpg",
         "descripcion": "Radiografía de tórax. Hiperclaridad pleural unilateral con colapso parcial del parénquima pulmonar y ausencia de trama vascular.",
         "hallazgo_clave": "Indica la penetración de un arma blanca en la cavidad torácica, perforando la pleura y permitiendo la entrada de aire. Constituye una lesión que compromete la vida."
     },
@@ -67,15 +67,15 @@
         "id": 9,
         "titulo": "Fractura de cráneo por hundimiento",
         "categoria": "Contusiones",
-        "imagen": "img/tc-craneo-hundimiento.jpg",
+        "imagen": "img/rx-craneo-hundimiento.jpg",
         "descripcion": "Tomografía de cráneo. Fragmentos de la bóveda craneal desplazados internamente hacia el parénquima cerebral con fracturas concéntricas.",
-        "hallazgo_clave": "Lesión producida por el impacto directo y de alta energía de un objeto contundente con una superficie de contacto relativamente pequeña (ej. martillo o bate)."
+        "hallazgo_clave": "Lesión producida por el impacto directo y de alta energía de un objeto contundente con una superficie de contacto relativamente pequeña."
     },
     {
         "id": 10,
         "titulo": "Trauma pélvico cerrado",
         "categoria": "Traumatología Especial",
-        "imagen": "img/rx-pelvis-contuso.jpg",
+        "imagen": "img/rx-trauma-pelvico.jpg",
         "descripcion": "Radiografía de pelvis. Fractura no desplazada de las ramas isquiopubianas, indicando trauma contuso focalizado.",
         "hallazgo_clave": "Hallazgo vital para documentar objetivamente el daño morfológico subyacente en la investigación de delitos contra la integridad sexual con uso de fuerza física."
     }
