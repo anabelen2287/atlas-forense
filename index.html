@@ -3,86 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Interactivo de Radiología Forense</title>
+    <title>Campus Forense - UCE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Variables de color para simular un entorno clínico */
         :root {
-            --bg-color: #f0f4f8;
-            --text-color: #2d3748;
-            --card-bg: #ffffff;
-            --primary: #2b6cb0;
-            --accent: #e53e3e;
-            --shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+            --primary: #1a365d; --secondary: #2b6cb0; --accent: #e53e3e;
+            --bg: #f4f7f6; --text: #2d3748; --card: #ffffff;
+            --font-size: 16px;
         }
+        /* Accesibilidad - Modos */
+        body.negatoscopio { --bg: #111; --text: #eee; --card: #222; --primary: #4fd1c5; }
+        body.alto-contraste { --bg: #000; --text: #ff0; --card: #000; --primary: #ff0; border-color: #ff0; }
+        body.alto-contraste * { border-color: #ff0 !important; }
 
-        /* Modo Negatoscopio (Oscuro) */
-        [data-theme="dark"] {
-            --bg-color: #1a202c;
-            --text-color: #e2e8f0;
-            --card-bg: #2d3748;
-            --primary: #63b3ed;
-            --shadow: rgba(0, 0, 0, 0.5) 0px 10px 15px -3px;
-        }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: var(--font-size); margin: 0; transition: all 0.3s; }
+        
+        /* Barra de Accesibilidad */
+        .accesibilidad-bar { background: #2d3748; color: white; padding: 5px 20px; display: flex; justify-content: flex-end; gap: 15px; font-size: 0.9em; }
+        .accesibilidad-bar button { background: transparent; border: 1px solid white; color: white; cursor: pointer; border-radius: 4px; padding: 2px 8px; }
+        .accesibilidad-bar button:hover { background: white; color: #2d3748; }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 0; transition: background-color 0.4s ease; }
+        /* Cabecera y Navegación (Estilo Moodle) */
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 30px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.2em; }
         
-        header { background: linear-gradient(135deg, var(--primary), #1a365d); color: white; padding: 40px 20px; text-align: center; box-shadow: var(--shadow); position: relative;}
-        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
-        header p { margin-top: 10px; font-size: 1.2em; opacity: 0.9; }
+        nav { background: var(--card); display: flex; justify-content: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
+        .nav-tab { padding: 15px 25px; cursor: pointer; font-weight: bold; color: var(--text); border-bottom: 3px solid transparent; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+        .nav-tab:hover, .nav-tab.activa { border-bottom-color: var(--accent); color: var(--secondary); background: rgba(0,0,0,0.02); }
 
-        /* Controles (Botones y Filtros) */
-        .controles { display: flex; justify-content: center; gap: 15px; padding: 20px; flex-wrap: wrap; background: var(--card-bg); border-bottom: 2px solid var(--primary); transition: 0.4s;}
-        button { cursor: pointer; padding: 10px 20px; border: none; border-radius: 25px; font-weight: bold; transition: all 0.3s ease; background: var(--bg-color); color: var(--text-color); border: 1px solid var(--primary); }
-        button:hover, button.activo { background: var(--primary); color: white; transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-        
-        .btn-negatoscopio { position: absolute; top: 20px; right: 20px; background: #ecc94b; color: #1a202c; border: none; }
-        .btn-negatoscopio:hover { background: #d69e2e; }
+        /* Contenedor Principal */
+        main { max-width: 1200px; margin: 30px auto; padding: 0 20px; min-height: 60vh; }
+        .seccion { display: none; animation: fadeIn 0.5s; }
+        .seccion.activa { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Cuadrícula de Casos */
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; padding: 40px; max-width: 1400px; margin: 0 auto; }
-        
-        .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column;}
-        .card:hover { transform: translateY(-10px); box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 25px -5px; }
-        
-        .img-container { overflow: hidden; position: relative; }
-        .card img { width: 100%; height: 280px; object-fit: cover; transition: transform 0.5s ease; cursor: crosshair; }
-        .card img:hover { transform: scale(1.1); } /* Efecto Lupa al pasar el ratón */
-        
-        .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-        .tag { background: var(--primary); color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.85em; font-weight: bold; align-self: flex-start; text-transform: uppercase; letter-spacing: 0.5px;}
-        .card h3 { margin: 15px 0 10px; font-size: 1.4em; }
-        
-        /* Mini-juego: Reto Pericial */
-        .seccion-dictamen { background: rgba(0,0,0,0.05); padding: 15px; border-radius: 8px; margin-top: auto; border-left: 4px solid var(--accent); }
-        .hallazgo-oculto { filter: blur(6px); cursor: pointer; user-select: none; transition: filter 0.4s ease; margin-top: 10px; font-style: italic;}
-        .hallazgo-oculto.revelado { filter: blur(0); cursor: text; user-select: text; font-style: normal;}
-        .btn-revelar { background: var(--accent); color: white; border: none; width: 100%; margin-top: 10px; border-radius: 5px; }
-        .btn-revelar:hover { background: #c53030; }
+        /* Módulos: Calendario y Laboratorio */
+        .calendario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .dia-clase { background: var(--card); padding: 20px; border-radius: 8px; border-left: 5px solid var(--secondary); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .dia-clase h3 { margin-top: 0; color: var(--primary); display: flex; justify-content: space-between; }
+        .badge-hora { background: var(--bg); padding: 4px 8px; border-radius: 4px; font-size: 0.9em; }
+        .lab-convenio { background: var(--card); padding: 25px; border-radius: 8px; border-left: 5px solid var(--accent); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 25px; }
+        .lab-convenio ul { line-height: 1.7; }
 
-        /* Mensaje si no hay resultados */
-        .sin-resultados { text-align: center; grid-column: 1 / -1; font-size: 1.5em; opacity: 0.6; padding: 40px; }
+        /* Módulos: Atlas (Negatoscopio) */
+        .filtros-atlas { margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .filtros-atlas button { padding: 8px 15px; border-radius: 20px; border: 1px solid var(--secondary); background: var(--card); color: var(--text); cursor: pointer; }
+        .filtros-atlas button.activo { background: var(--secondary); color: white; }
+        .grid-atlas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card-atlas { background: var(--card); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card-atlas img { width: 100%; height: 250px; object-fit: cover; cursor: crosshair; }
+        .card-content { padding: 20px; }
+
+        /* Módulos: Simulador Pericial (Juego) */
+        .simulador-container { background: var(--card); border-radius: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .simulador-img { width: 100%; border-radius: 8px; max-height: 400px; object-fit: contain; background: #000; }
+        .opciones-simulador { display: flex; flex-direction: column; gap: 10px; justify-content: center; }
+        .btn-opcion { padding: 15px; text-align: left; background: var(--bg); border: 2px solid transparent; border-radius: 8px; cursor: pointer; font-size: 1.1em; transition: 0.3s; }
+        .btn-opcion:hover { background: #e2e8f0; border-color: var(--secondary); }
+        .btn-opcion.correcto { background: #c6f6d5; border-color: #38a169; color: #22543d; }
+        .btn-opcion.incorrecto { background: #fed7d7; border-color: #e53e3e; color: #742a2a; }
+
+        /* Módulos: Cuestionario */
+        .pregunta-quiz { background: var(--card); padding: 20px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .opciones-quiz label { display: block; padding: 10px; background: var(--bg); margin: 5px 0; border-radius: 5px; cursor: pointer; border: 1px solid transparent; }
+        .opciones-quiz label:hover { border-color: var(--secondary); }
+        .btn-evaluar { background: var(--accent); color: white; border: none; padding: 12px 25px; border-radius: 5px; font-size: 1.1em; cursor: pointer; display: block; margin: 20px auto; }
+        
+        @media (max-width: 768px) { .simulador-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
+    <!-- Panel de Accesibilidad -->
+    <div class="accesibilidad-bar">
+        <span><i class="fas fa-universal-access"></i> Herramientas de Inclusión:</span>
+        <button title="Aumentar tamaño de letra" onclick="cambiarFuente(1)">A+</button>
+        <button title="Reducir tamaño de letra" onclick="cambiarFuente(-1)">A-</button>
+        <button title="Modo oscuro para análisis por imágenes" onclick="toggleTema('negatoscopio')"><i class="fas fa-x-ray"></i> Negatoscopio</button>
+        <button title="Modo para baja visión" onclick="toggleTema('alto-contraste')"><i class="fas fa-adjust"></i> Alto Contraste</button>
+    </div>
+
     <header>
-        <button id="btn-tema" class="btn-negatoscopio">💡 Encender Negatoscopio</button>
-        <h1>Atlas Interactivo de Radiología Forense</h1>
-        <p>Universidad Central del Ecuador | 7mo Semestre</p>
+        <h1>Campus Digital de Radiología Forense</h1>
+        <p>Entorno Virtual de Aprendizaje - Séptimo Semestre | Facultad de Ciencias Médicas</p>
     </header>
 
-    <div class="controles" id="filtros">
-        <button class="filtro activo" data-cat="Todos">Todos los Expedientes</button>
-        <button class="filtro" data-cat="Arma de Fuego">Armas de Fuego</button>
-        <button class="filtro" data-cat="Asfixia Mecánica">Asfixias</button>
-        <button class="filtro" data-cat="Suceso de Tránsito">Tránsito</button>
-        <button class="filtro" data-cat="Arma Blanca">Armas Blancas</button>
-        <button class="filtro" data-cat="Contusiones">Contusiones</button>
-    </div>
+    <!-- Navegación tipo Pestañas -->
+    <nav id="menu-navegacion">
+        <div class="nav-tab activa" data-target="sec-calendario"><i class="far fa-calendar-alt"></i> Horarios y Prácticas</div>
+        <div class="nav-tab" data-target="sec-atlas"><i class="fas fa-images"></i> Base de Datos DICOM</div>
+        <div class="nav-tab" data-target="sec-simulador"><i class="fas fa-microscope"></i> Simulador Pericial</div>
+        <div class="nav-tab" data-target="sec-cuestionario"><i class="fas fa-tasks"></i> Autoevaluación</div>
+    </nav>
 
-    <div class="grid-container" id="atlas-container">
-        <!-- JS inyectará los casos aquí -->
-    </div>
+    <main>
+        <!-- 1. PESTAÑA: CALENDARIO Y LABORATORIO -->
+        <section id="sec-calendario" class="seccion activa">
+            <h2><i class="far fa-calendar-check"></i> Cronograma de Clases</h2>
+            <p>La planificación académica de la cátedra se distribuye en las siguientes sesiones regulares:</p>
+            <div class="calendario-grid">
+                <div class="dia-clase">
+                    <h3>Martes <span class="badge-hora"><i class="far fa-clock"></i> 08:00 - 10:00</span></h3>
+                    <p><strong>Teoría y Fundamentos:</strong> Revisión de mecanismos de trauma, balística de efectos y asfixiología mecánica forense.</p>
+                </div>
+                <div class="dia-clase">
+                    <h3>Jueves <span class="badge-hora"><i class="far fa-clock"></i> 08:00 - 10:00</span></h3>
+                    <p><strong>Clínica Forense:</strong> Análisis interactivo de placas radiológicas, revisión de casos y estructuración de informes periciales.</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 40px;"><i class="fas fa-flask"></i> Laboratorio de Anatomía y Conservación (Convenio FMV)</h2>
+            <div class="lab-convenio">
+                <p>Como componente práctico transversal, los estudiantes complementarán su formación de imagenología en el <strong>Laboratorio de Anatomía Animal de la Facultad de Medicina Veterinaria (FMV)</strong>. Este convenio interinstitucional permite correlacionar de forma directa los hallazgos radiológicos con piezas biológicas reales sometidas a técnicas avanzadas de preservación y bio-modelos.</p>
+                
+                <p><strong>Líneas de técnica anatómica aplicadas a la docencia:</strong></p>
+                <ul>
+                    <li><strong>Plastinación en frío:</strong> Análisis de densidades tisulares en cortes biológicos libres de toxicidad.</li>
+                    <li><strong>Técnica de Elnady y deshidratación de tejidos:</strong> Correlación morfológica directa con estructuras óseas y cartilaginosas.</li>
+                    <li><strong>Técnica de Alcohol-Propilenglicol:</strong> Preservación de órganos y tejidos blandos para el estudio de traumatismos internos.</li>
+                    <li><strong>Manufactura Aditiva (Impresión 3D):</strong> Uso de tecnologías FDM y SLA para la réplica biomédica exacta de patrones de fracturas y modelado de lesiones contusas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. PESTAÑA: ATLAS -->
+        <section id="sec-atlas" class="seccion">
+            <h2><i class="fas fa-images"></i> Base de Datos DICOM (Simulada)</h2>
+            <div class="filtros-atlas" id="filtros-container">
+                <!-- Filtros inyectados por JS -->
+            </div>
+            <div class="grid-atlas" id="atlas-container">
+                <!-- Tarjetas inyectadas por JS -->
+            </div>
+        </section>
+
+        <!-- 3. PESTAÑA: SIMULADOR PERICIAL (Juego) -->
+        <section id="sec-simulador" class="seccion">
+            <h2><i class="fas fa-gamepad"></i> Sala de Diagnóstico a Ciegas</h2>
+            <p>El sistema cargará un expediente radiológico aleatorio. Debate con tu equipo e identifica la categoría del trauma o la lesión antes de revelar el dictamen oficial.</p>
+            <button onclick="iniciarSimulador()" style="padding:10px 20px; background:var(--secondary); color:white; border:none; border-radius:5px; cursor:pointer; margin-bottom:20px; font-weight:bold;">Siguiente Caso Aleatorio <i class="fas fa-arrow-right"></i></button>
+            
+            <div class="simulador-container" id="simulador-box" style="display:none;">
+                <div>
+                    <img id="sim-img" src="" alt="Caso Pericial" class="simulador-img">
+                </div>
+                <div class="opciones-simulador" id="sim-opciones">
+                    <!-- Opciones inyectadas por JS -->
+                </div>
+            </div>
+            <div id="sim-feedback" style="margin-top:20px; padding:15px; border-radius:5px; display:none;"></div>
+        </section>
+
+        <!-- 4. PESTAÑA: CUESTIONARIOS -->
+        <section id="sec-cuestionario" class="seccion">
+            <h2><i class="fas fa-clipboard-check"></i> Cuestionario de Autoevaluación Continua</h2>
+            <p>Responde a los siguientes enunciados basándote en la teoría revisada en el Laboratorio y las guías radiológicas.</p>
+            <div id="quiz-container">
+                <!-- Preguntas inyectadas por JS -->
+            </div>
+            <button class="btn-evaluar" onclick="evaluarQuiz()"><i class="fas fa-paper-plane"></i> Entregar Dictamen y Calificar</button>
+            <div id="quiz-resultado" style="font-size:1.5em; font-weight:bold; text-align:center; margin-top:20px;"></div>
+        </section>
+    </main>
 
     <script src="app.js"></script>
 </body>
