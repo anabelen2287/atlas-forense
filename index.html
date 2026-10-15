@@ -83,11 +83,11 @@
         header {
             background: linear-gradient(135deg, #091929 0%, #0f2942 60%, #1e56a0 100%);
             color: white;
-            padding: 28px 25px;
+            padding: 25px 25px;
             border-bottom: 4px solid var(--cyan);
         }
         .header-inner {
-            max-width: 1350px;
+            max-width: 1380px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -95,8 +95,8 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-        .header-title h1 { margin: 0; font-size: 2em; letter-spacing: 0.5px; }
-        .header-title p { margin: 6px 0 0; opacity: 0.9; font-size: 1em; }
+        .header-title h1 { margin: 0; font-size: 1.95em; letter-spacing: 0.5px; }
+        .header-title p { margin: 6px 0 0; opacity: 0.9; font-size: 0.98em; }
         .header-badges { display: flex; gap: 10px; flex-wrap: wrap; }
         .badge-inst {
             background: rgba(255,255,255,0.12);
@@ -123,10 +123,10 @@
             background: transparent;
             border: none;
             border-bottom: 4px solid transparent;
-            padding: 15px 22px;
+            padding: 14px 18px;
             cursor: pointer;
             font-weight: 700;
-            font-size: 0.96em;
+            font-size: 0.92em;
             color: var(--text);
             transition: 0.25s;
             display: inline-flex;
@@ -141,7 +141,7 @@
         }
 
         main {
-            max-width: 1350px;
+            max-width: 1380px;
             margin: 25px auto;
             padding: 0 20px 60px;
             min-height: 75vh;
@@ -155,7 +155,7 @@
             background: linear-gradient(125deg, #091929 0%, #163a5f 100%);
             color: white;
             border-radius: 16px;
-            padding: 40px;
+            padding: 35px;
             display: grid;
             grid-template-columns: 1.3fr 1fr;
             gap: 30px;
@@ -164,8 +164,8 @@
             margin-bottom: 30px;
             border: 1px solid #2b4c7e;
         }
-        .hero-banner h2 { font-size: 2.2em; margin: 0 0 15px; color: #38bdf8; }
-        .hero-banner p { font-size: 1.08em; line-height: 1.6; opacity: 0.95; }
+        .hero-banner h2 { font-size: 2.1em; margin: 0 0 15px; color: #38bdf8; }
+        .hero-banner p { font-size: 1.05em; line-height: 1.6; opacity: 0.95; }
         .hero-stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -179,21 +179,21 @@
             border-radius: 10px;
             text-align: center;
         }
-        .stat-box strong { display: block; font-size: 1.5em; color: #38bdf8; }
+        .stat-box strong { display: block; font-size: 1.45em; color: #38bdf8; }
         .hero-visual {
             background: #050a12;
             border-radius: 12px;
-            padding: 20px;
+            padding: 18px;
             border: 2px solid #00b4d8;
             text-align: center;
             position: relative;
         }
         .hero-visual img {
             width: 100%;
-            max-height: 260px;
+            max-height: 250px;
             object-fit: cover;
             border-radius: 8px;
-            opacity: 0.9;
+            cursor: zoom-in;
         }
 
         .grid-2col {
@@ -210,25 +210,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .card-panel h3 { margin-top: 0; color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 10px; }
-
-        .tecnicas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
-        .tecnica-card {
-            background: var(--bg);
-            border: 2px solid var(--border);
-            border-radius: 10px;
-            padding: 15px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .tecnica-card.activa, .tecnica-card:hover {
-            border-color: var(--secondary);
-            background: rgba(30,86,160,0.08);
-        }
 
         /* --- PESTAÑA 2: 16 SEMANAS DEL SYLLABUS --- */
         .syllabus-layout {
@@ -274,6 +255,18 @@
             padding: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
+        .placa-semana-box {
+            text-align: center;
+            background: #050811;
+            padding: 14px;
+            border-radius: 12px;
+            border: 2px solid #1e56a0;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .placa-semana-box:hover {
+            border-color: #00b4d8;
+            transform: translateY(-2px);
+        }
         .tip-box {
             background: rgba(0, 180, 216, 0.1);
             border-left: 5px solid var(--cyan);
@@ -297,10 +290,13 @@
             font-weight: bold;
             cursor: pointer;
             transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-        .btn-action:hover { opacity: 0.9; }
+        .btn-action:hover { opacity: 0.9; transform: translateY(-1px); }
 
-        /* --- PESTAÑA 3: VIRTUOPSIA EN TIEMPO REAL --- */
+        /* --- PESTAÑA 3: LABORATORIO DE VIRTUOPSIA EN TIEMPO REAL --- */
         .virtuopsia-station {
             background: #0b111e;
             color: #e2e8f0;
@@ -311,7 +307,7 @@
         }
         .virt-grid {
             display: grid;
-            grid-template-columns: 300px 1fr 340px;
+            grid-template-columns: 320px 1fr 340px;
             gap: 20px;
             margin-top: 20px;
         }
@@ -321,16 +317,41 @@
             border-radius: 10px;
             padding: 18px;
         }
+        /* Topograma Radiológico Realista */
         .body-scout {
             position: relative;
-            height: 380px;
-            background: #050811;
-            border: 1px solid #334155;
-            border-radius: 8px;
+            height: 430px;
+            background: radial-gradient(circle at center, #0f1f38 0%, #030712 100%);
+            border: 2px solid #00b4d8;
+            border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            box-shadow: inset 0 0 25px rgba(0, 180, 216, 0.25);
+        }
+        .scout-grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(0, 180, 216, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 180, 216, 0.08) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+        }
+        .scout-ruler {
+            position: absolute;
+            left: 6px;
+            top: 10px;
+            bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: monospace;
+            font-size: 0.68em;
+            color: #38bdf8;
+            pointer-events: none;
+            opacity: 0.8;
         }
         .scan-line {
             position: absolute;
@@ -338,15 +359,30 @@
             width: 100%;
             height: 3px;
             background: #ff2a2a;
-            box-shadow: 0 0 12px #ff2a2a;
-            top: 20%;
-            transition: top 0.1s;
+            box-shadow: 0 0 14px #ff2a2a, 0 0 4px #ffffff;
+            top: 15%;
+            z-index: 10;
+            transition: top 0.08s ease-out;
+            pointer-events: none;
+        }
+        .scan-line::after {
+            content: "HAZ AXIAL CT";
+            position: absolute;
+            right: 6px;
+            top: -16px;
+            font-size: 9px;
+            font-family: monospace;
+            background: #ff2a2a;
+            color: #fff;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-weight: bold;
         }
         .virt-monitor {
             background: #000;
             border: 2px solid #00b4d8;
             border-radius: 10px;
-            height: 360px;
+            height: 380px;
             position: relative;
             display: flex;
             justify-content: center;
@@ -358,6 +394,7 @@
             max-height: 100%;
             object-fit: contain;
             transition: filter 0.25s ease, transform 0.25s ease;
+            cursor: zoom-in;
         }
         .hud-overlay {
             position: absolute;
@@ -367,7 +404,11 @@
             font-family: monospace;
             font-size: 0.85em;
             pointer-events: none;
-            text-shadow: 0 1px 3px #000;
+            text-shadow: 0 1px 4px #000;
+            background: rgba(0,0,0,0.55);
+            padding: 6px 10px;
+            border-radius: 6px;
+            border-left: 3px solid #00f5d4;
         }
         .btn-ventana {
             background: #1e293b;
@@ -381,7 +422,68 @@
         }
         .btn-ventana.activa { background: #00b4d8; color: #000; }
 
-        /* --- PESTAÑA 4: ATLAS DICOM --- */
+        /* --- PESTAÑA 4: LABORATORIO DE TÉCNICAS ANATÓMICAS (FMV) --- */
+        .lab-hero {
+            background: linear-gradient(135deg, #132a4a 0%, #1e56a0 100%);
+            color: white;
+            padding: 28px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            border-left: 6px solid #00b4d8;
+        }
+        .tecnicas-selector-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .btn-tec-select {
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.25s;
+            color: var(--text);
+        }
+        .btn-tec-select:hover, .btn-tec-select.activa {
+            border-color: var(--secondary);
+            background: rgba(30, 86, 160, 0.08);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+        .btn-tec-select h4 { margin: 0 0 6px 0; color: var(--primary); font-size: 1.1em; display: flex; align-items: center; gap: 8px; }
+        .ficha-tecnica-anatomica {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+        }
+        .pasos-flujo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .paso-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--secondary);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .simulador-uh-box {
+            background: #0b111e;
+            color: #fff;
+            border-radius: 14px;
+            padding: 25px;
+            border: 2px solid #00b4d8;
+        }
+
+        /* --- PESTAÑA 5: ATLAS DICOM --- */
         .grid-atlas {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
@@ -397,7 +499,7 @@
             flex-direction: column;
         }
         .visor-img-wrapper { background: #000; height: 250px; overflow: hidden; position: relative; }
-        .visor-img-wrapper img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: 0.3s; }
+        .visor-img-wrapper img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: 0.3s; }
         .herramientas-dicom {
             background: #1a202c;
             color: #fff;
@@ -410,7 +512,7 @@
             gap: 6px;
         }
 
-        /* --- PESTAÑA 5: ARTÍCULOS CIENTÍFICOS --- */
+        /* --- PESTAÑA 6: ARTÍCULOS CIENTÍFICOS --- */
         .articulos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -436,25 +538,26 @@
         }
         .doi-link:hover { text-decoration: underline; }
 
-        /* MODAL */
+        /* MODAL UNIVERSAL DE AMPLIACIÓN */
         .modal-overlay {
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.92);
-            z-index: 3000;
+            z-index: 4000;
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
         .modal-card {
-            background: #131c2e;
+            background: #0f172a;
             color: #fff;
-            max-width: 900px;
+            max-width: 960px;
             width: 100%;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
-            border: 1px solid #38bdf8;
+            border: 2px solid #00b4d8;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
         }
 
         @media (max-width: 992px) {
@@ -491,41 +594,47 @@
         </div>
     </header>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
+    <!-- MENÚ DE NAVEGACIÓN (6 PESTAÑAS INTERACTIVAS) -->
     <nav>
-        <button class="nav-tab activa" onclick="irPestana('sec-inicio', this)">
-            <i class="fas fa-home"></i> Portada y Bienvenida
+        <button class="nav-tab activa" id="tab-btn-inicio" onclick="irPestana('sec-inicio', this)">
+            <i class="fas fa-home"></i> Portada y Horarios
         </button>
-        <button class="nav-tab" onclick="irPestana('sec-semanas', this)">
-            <i class="fas fa-calendar-week"></i> Módulos por Semana (1-16)
+        <button class="nav-tab" id="tab-btn-semanas" onclick="irPestana('sec-semanas', this)">
+            <i class="fas fa-calendar-week"></i> Syllabus (Semanas 1-16)
         </button>
-        <button class="nav-tab" onclick="irPestana('sec-virtuopsia', this)">
-            <i class="fas fa-procedures"></i> Laboratorio de Virtuopsia
+        <button class="nav-tab" id="tab-btn-virtuopsia" onclick="irPestana('sec-virtuopsia', this)">
+            <i class="fas fa-procedures"></i> Sala de Virtuopsia
         </button>
-        <button class="nav-tab" onclick="irPestana('sec-atlas', this)">
-            <i class="fas fa-x-ray"></i> Negatoscopio DICOM (10 Casos)
+        <button class="nav-tab" id="tab-btn-anatomia" onclick="irPestana('sec-anatomia', this)">
+            <i class="fas fa-flask"></i> Lab. Técnicas Anatómicas
         </button>
-        <button class="nav-tab" onclick="irPestana('sec-articulos', this)">
-            <i class="fas fa-book-open"></i> Evidencia Científica y Bibliografía
+        <button class="nav-tab" id="tab-btn-atlas" onclick="irPestana('sec-atlas', this)">
+            <i class="fas fa-x-ray"></i> Negatoscopio DICOM
+        </button>
+        <button class="nav-tab" id="tab-btn-articulos" onclick="irPestana('sec-articulos', this)">
+            <i class="fas fa-book-open"></i> Artículos y Bibliografía
         </button>
     </nav>
 
     <main>
         <!-- ==========================================================
-             1. PORTADA DE BIENVENIDA, HORARIOS Y CONVENIO FMV
+             1. PORTADA DE BIENVENIDA Y HORARIOS
         =========================================================== -->
         <section id="sec-inicio" class="seccion activa">
             <div class="hero-banner">
                 <div>
                     <span style="background:#00b4d8; color:#000; padding:4px 12px; border-radius:15px; font-weight:bold; font-size:0.85em;">BIENVENIDOS AL PERÍODO ACADÉMICO 2026</span>
                     <h2 style="margin-top:12px;">La Imagenología como Testigo Silencioso de la Justicia</h2>
-                    <p>Bienvenidos a la plataforma interactiva de <strong>Radiología Forense</strong>. En este entorno clínico-pericial aprenderás a identificar indicios físicos y biológicos en el cadáver y en el sujeto vivo, evaluar traumatismos balísticos, mecánicos y de tránsito, y estructurar informes periciales con rigor científico y cadena de custodia.</p>
+                    <p>Bienvenidos al Entorno Virtual de Aprendizaje de <strong>Radiología Forense</strong>. Aquí integrarás la anatomía radiológica, la patología traumática y la criminalística para identificar indicios en el cadáver y en el sujeto vivo, auditar imágenes forenses y elaborar informes periciales con rigor científico.</p>
                     <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
-                        <button class="btn-action" style="background:#00b4d8; color:#000;" onclick="document.querySelectorAll('.nav-tab')[1].click()">
-                            <i class="fas fa-play"></i> Iniciar Semana 1 del Syllabus
+                        <button class="btn-action" style="background:#00b4d8; color:#000;" onclick="document.getElementById('tab-btn-semanas').click()">
+                            <i class="fas fa-calendar-check"></i> Explorar Semanas 1 a 16
                         </button>
-                        <button class="btn-action" style="background:#d9381e;" onclick="document.querySelectorAll('.nav-tab')[2].click()">
-                            <i class="fas fa-vr-cardboard"></i> Entrar a Sala de Virtuopsia
+                        <button class="btn-action" style="background:#d9381e;" onclick="document.getElementById('tab-btn-virtuopsia').click()">
+                            <i class="fas fa-procedures"></i> Iniciar Virtuopsia en Tiempo Real
+                        </button>
+                        <button class="btn-action" style="background:#10b981; color:#000;" onclick="document.getElementById('tab-btn-anatomia').click()">
+                            <i class="fas fa-flask"></i> Ir al Lab. de Técnicas Anatómicas
                         </button>
                     </div>
                     <div class="hero-stats">
@@ -536,68 +645,46 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <img src="img/tc-craneo-bala.jpg" alt="Reconstrucción Forense 3D" onerror="this.src='https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=600&q=80'">
-                    <div style="margin-top:12px; font-size:0.9em; color:#38bdf8;">
-                        <i class="fas fa-check-circle"></i> Prerrequisitos: Anatomía II (MIP02BFT03) | Patología en Imagen (MIP05BPP03)
+                    <img src="img/tc-craneo-bala.jpg" alt="Reconstrucción Forense 3D"
+                         onclick="abrirModalSeguro('img/tc-craneo-bala.jpg', 'Reconstrucción Tomográfica 3D Forense', 'Orificio de entrada parietal con bisel interno (Signo del cono truncado de Bonnet) y trazos radiados.')"
+                         onerror="this.src='https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=600&q=80'">
+                    <div style="margin-top:12px; font-size:0.88em; color:#38bdf8;">
+                        <i class="fas fa-search-plus"></i> Haz clic sobre la imagen para ampliar en el monitor clínico
                     </div>
                 </div>
             </div>
 
             <div class="grid-2col">
                 <div class="card-panel">
-                    <h3><i class="far fa-clock"></i> Horario Oficial de Clases Presenciales y PAE</h3>
+                    <h3><i class="far fa-clock"></i> Horario Oficial de Clases (Séptimo Semestre)</h3>
                     <div style="padding:15px; background:var(--bg); border-left:4px solid var(--secondary); border-radius:8px; margin-bottom:15px;">
                         <div style="display:flex; justify-content:space-between; font-weight:bold;">
-                            <span>MARTES (Componente Docente / Heurístico)</span>
+                            <span>MARTES (Componente Docente - CD)</span>
                             <span style="color:var(--secondary);">08:00 - 10:00</span>
                         </div>
-                        <p style="margin:8px 0 0; font-size:0.95em;">Conferencias problémicas, análisis de expedientes médico-legales, tanatología y fundamentos de traumatología forense.</p>
+                        <p style="margin:8px 0 0; font-size:0.95em;">Conferencias problémicas, conversación heurística, tanatología, balística, asfixiología y traumatología médico-legal.</p>
                     </div>
                     <div style="padding:15px; background:var(--bg); border-left:4px solid var(--accent); border-radius:8px;">
                         <div style="display:flex; justify-content:space-between; font-weight:bold;">
-                            <span>JUEVES (Práctica de Aplicación PAE)</span>
+                            <span>JUEVES (Prácticas de Aplicación - PAE)</span>
                             <span style="color:var(--accent);">08:00 - 10:00</span>
                         </div>
-                        <p style="margin:8px 0 0; font-size:0.95em;">Lectura de placas radiológicas, fijación de indicios, virtuopsia, mapas conceptuales y redacción de informes periciales.</p>
+                        <p style="margin:8px 0 0; font-size:0.95em;">Simulación de peritajes radiológicos, virtuopsia, correlación con piezas anatómicas conservadas y elaboración de informes periciales.</p>
                     </div>
                 </div>
 
                 <div class="card-panel">
-                    <h3><i class="fas fa-balance-scale"></i> Sistema de Evaluación Oficial UCE (Sobre 20 Puntos)</h3>
+                    <h3><i class="fas fa-balance-scale"></i> Ponderación Académica Oficial UCE (Sobre 20 Puntos)</h3>
                     <ul style="line-height:1.8; padding-left:20px; margin:0;">
                         <li><strong>Evaluación Individual (Lección parcial escrita):</strong> 35% (7 / 20 pts)</li>
-                        <li><strong>PAE y Evaluación Formativa Grupal:</strong> 25% (5 / 20 pts) — <em>Mapas conceptuales, infografías, exposición y resolución de casos.</em></li>
+                        <li><strong>PAE y Evaluación Formativa Grupal:</strong> 25% (5 / 20 pts) — <em>Mapas conceptuales, infografías, estudio de casos y exposiciones.</em></li>
                         <li><strong>Evaluación Sumativa Teórica 1:</strong> 10% (2 / 20 pts)</li>
                         <li><strong>Evaluación Sumativa Teórica 2:</strong> 30% (6 / 20 pts)</li>
                     </ul>
                     <div style="margin-top:12px; font-size:0.88em; background:var(--bg); padding:10px; border-radius:6px;">
-                        <strong>Escala CACES/UCE:</strong> 18.5-20 Excelente | 16-18.49 Muy Bueno | 14-15.99 Bueno | &lt;13.5 Deficiente.
+                        <strong>Equivalencias SES/UCE:</strong> 18.50 a 20.00 Excelente | 16.00 a 18.49 Muy Bueno | 14.00 a 15.99 Bueno | &lt;13.49 Deficiente.
                     </div>
                 </div>
-            </div>
-
-            <div class="card-panel">
-                <h3><i class="fas fa-flask"></i> Convenio Interinstitucional: Laboratorio de Anatomía Animal (FMV)</h3>
-                <p>Prácticas de correlación radiológica y preservación biológica desarrolladas en conjunto con el Laboratorio de Anatomía Animal de la Facultad de Medicina Veterinaria y Zootecnia. <strong>Haz clic en cada técnica para revisar el protocolo:</strong></p>
-                <div class="tecnicas-grid">
-                    <div class="tecnica-card activa" onclick="seleccionarTecnicaFMV(0, this)">
-                        <strong><i class="fas fa-snowflake"></i> 1. Plastinación en Frío</strong>
-                        <p style="margin:5px 0 0; font-size:0.85em;">Polimerización bioduradera sin toxicidad para correlación tomográfica.</p>
-                    </div>
-                    <div class="tecnica-card" onclick="seleccionarTecnicaFMV(1, this)">
-                        <strong><i class="fas fa-bone"></i> 2. Técnica de Elnady</strong>
-                        <p style="margin:5px 0 0; font-size:0.85em;">Especímenes flexibles deshidratados para biomecánica traumática.</p>
-                    </div>
-                    <div class="tecnica-card" onclick="seleccionarTecnicaFMV(2, this)">
-                        <strong><i class="fas fa-vial"></i> 3. Alcohol-Propilenglicol</strong>
-                        <p style="margin:5px 0 0; font-size:0.85em;">Fijación ecológica de órganos para estudio de trayectos lesionales.</p>
-                    </div>
-                    <div class="tecnica-card" onclick="seleccionarTecnicaFMV(3, this)">
-                        <strong><i class="fas fa-cubes"></i> 4. Impresión Biomédica 3D</strong>
-                        <p style="margin:5px 0 0; font-size:0.85em;">Manufactura aditiva FDM/SLA de fracturas para demostración judicial.</p>
-                    </div>
-                </div>
-                <div id="info-fmv-detalle" style="margin-top:15px; padding:16px; background:var(--bg); border-left:4px solid var(--secondary); border-radius:8px;"></div>
             </div>
         </section>
 
@@ -605,8 +692,8 @@
              2. PLANIFICACIÓN POR SEMANAS (1 A 16 DEL SYLLABUS)
         =========================================================== -->
         <section id="sec-semanas" class="seccion">
-            <h2><i class="fas fa-list-ol"></i> Desarrollo Microcurricular por Semanas (Semanas 1 a 16)</h2>
-            <p>Selecciona la semana académica en el menú izquierdo para acceder a los contenidos del syllabus, el tip radiológico-forense, el mini-juego del tema y el cuestionario semanal.</p>
+            <h2><i class="fas fa-list-ol"></i> Planificación Microcurricular Interactiva (Semanas 1 a 16)</h2>
+            <p>Selecciona cualquier semana para desplegar los contenidos oficiales del syllabus, el tip pericial, la placa radiológica ampliable, el mini-juego del tema y su cuestionario.</p>
 
             <div class="syllabus-layout">
                 <div class="semanas-sidebar" id="lista-botones-semanas"></div>
@@ -615,16 +702,16 @@
         </section>
 
         <!-- ==========================================================
-             3. LABORATORIO DE VIRTUOPSIA EN TIEMPO REAL
+             3. LABORATORIO DE VIRTUOPSIA EN TIEMPO REAL (PMCT)
         =========================================================== -->
         <section id="sec-virtuopsia" class="seccion">
             <div class="virtuopsia-station">
                 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; border-bottom:1px solid #263554; padding-bottom:15px;">
                     <div>
-                        <h2 style="margin:0; color:#38bdf8;"><i class="fas fa-procedures"></i> Estación de Virtuopsia (PMCT - Tomografía Post-Mortem)</h2>
-                        <small style="color:#94a3b8;">Simulación de autopsia radiológica no invasiva, cadena de custodia digital y localización de indicios</small>
+                        <h2 style="margin:0; color:#38bdf8;"><i class="fas fa-procedures"></i> Estación de Virtuopsia en Tiempo Real (PMCT)</h2>
+                        <small style="color:#94a3b8;">Exploración tomográfica post-mortem multicorte con topograma anatómico real y cadena de custodia</small>
                     </div>
-                    <div style="display:flex; gap:10px; align-items:center;">
+                    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
                         <label><strong>Seleccionar Cadáver / Expediente:</strong></label>
                         <select id="select-caso-virt" onchange="cargarCasoVirtuopsia()" style="padding:8px 12px; border-radius:6px; background:#1e293b; color:#fff; border:1px solid #38bdf8; font-weight:bold;">
                             <option value="0">Expediente #01: Traumatismo Craneoencefálico Balístico</option>
@@ -636,29 +723,108 @@
                 </div>
 
                 <div class="virt-grid">
-                    <!-- Columna 1: Topograma y Escáner -->
+                    <!-- Columna 1: Topograma (Scout View) con Cuerpo Radiológico Detallado -->
                     <div class="virt-panel">
-                        <h4 style="margin-top:0; color:#38bdf8;">1. Topograma (Scout View)</h4>
-                        <p style="font-size:0.85em; color:#cbd5e1;">Desliza el control para desplazar el haz tomográfico desde el cráneo hasta los miembros inferiores:</p>
-                        <input type="range" id="slider-corte" min="0" max="100" value="15" oninput="moverEscanerVirtuopsia(this.value)" style="width:100%; cursor:pointer; margin-bottom:10px;">
-                        <div style="display:flex; justify-content:space-between; font-size:0.8em; color:#94a3b8; margin-bottom:10px;">
-                            <span>Cráneo (0%)</span>
-                            <span id="label-nivel-corte" style="color:#00f5d4; font-weight:bold;">Nivel: 15%</span>
-                            <span>Tibia (100%)</span>
+                        <h4 style="margin-top:0; color:#38bdf8;"><i class="fas fa-male"></i> 1. Topograma (Scout View)</h4>
+                        <p style="font-size:0.82em; color:#cbd5e1; margin-bottom:8px;">Desliza el escáner axial o haz clic en los botones rápidos de región anatómica:</p>
+
+                        <input type="range" id="slider-corte" min="5" max="95" value="15" oninput="moverEscanerVirtuopsia(this.value)" style="width:100%; cursor:pointer; margin-bottom:6px;">
+                        <div style="display:flex; justify-content:space-between; font-size:0.78em; color:#94a3b8; margin-bottom:10px;">
+                            <span>Cráneo (5%)</span>
+                            <span id="label-nivel-corte" style="color:#00f5d4; font-weight:bold;">Corte Z: 15%</span>
+                            <span>Tibia/Pie (95%)</span>
                         </div>
 
+                        <div style="display:flex; gap:4px; margin-bottom:10px; flex-wrap:wrap;">
+                            <button class="btn-acc" style="font-size:0.75em; padding:3px 7px;" onclick="moverEscanerVirtuopsia(14)">Cráneo</button>
+                            <button class="btn-acc" style="font-size:0.75em; padding:3px 7px;" onclick="moverEscanerVirtuopsia(28)">Cuello/Hioides</button>
+                            <button class="btn-acc" style="font-size:0.75em; padding:3px 7px;" onclick="moverEscanerVirtuopsia(45)">Tórax</button>
+                            <button class="btn-acc" style="font-size:0.75em; padding:3px 7px;" onclick="moverEscanerVirtuopsia(68)">Pelvis</button>
+                            <button class="btn-acc" style="font-size:0.75em; padding:3px 7px;" onclick="moverEscanerVirtuopsia(85)">Piernas</button>
+                        </div>
+
+                        <!-- VISOR SCOUT ANATÓMICO REALISTA -->
                         <div class="body-scout">
+                            <div class="scout-grid-overlay"></div>
+                            <div class="scout-ruler">
+                                <span>0 cm</span><span>20</span><span>40</span><span>60</span><span>80</span><span>100</span><span>120</span><span>140</span><span>160</span><span>180</span>
+                            </div>
                             <div class="scan-line" id="linea-laser"></div>
-                            <!-- Silueta Anatómica SVG -->
-                            <svg viewBox="0 0 120 320" width="130" height="340" fill="none" stroke="#38bdf8" stroke-width="2">
-                                <circle cx="60" cy="32" r="20" fill="rgba(56,189,248,0.1)"/>
-                                <line x1="60" y1="52" x2="60" y2="70" stroke-width="4"/>
-                                <rect x="35" y="70" width="50" height="90" rx="10" fill="rgba(56,189,248,0.1)"/>
-                                <line x1="35" y1="75" x2="18" y2="165"/>
-                                <line x1="85" y1="75" x2="102" y2="165"/>
-                                <polygon points="35,160 85,160 78,190 42,190" fill="rgba(56,189,248,0.15)"/>
-                                <line x1="46" y1="190" x2="44" y2="300" stroke-width="3"/>
-                                <line x1="74" y1="190" x2="76" y2="300" stroke-width="3"/>
+
+                            <!-- Cuerpo Humano Radiológico (Silueta + Esqueleto Interno Detallado) -->
+                            <svg viewBox="0 0 200 440" width="210" height="415" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <radialGradient id="xrayGlow" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.95"/>
+                                        <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.55"/>
+                                        <stop offset="100%" stop-color="#0284c7" stop-opacity="0.1"/>
+                                    </radialGradient>
+                                    <filter id="glow">
+                                        <feGaussianBlur stdDeviation="1.2" result="coloredBlur"/>
+                                        <feMerge>
+                                            <feMergeNode in="coloredBlur"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+
+                                <!-- Contorno de Tejido Blando del Cuerpo Humano -->
+                                <path d="M100,14 C116,14 126,26 125,44 C124,57 118,66 113,72 L113,84 C128,88 152,94 158,110 C164,126 168,175 170,215 C171,225 163,228 159,220 C154,190 148,148 142,130 L138,195 C144,212 146,232 140,255 L134,345 L132,415 C132,424 120,426 117,418 L113,345 L108,265 L92,265 L87,345 L83,418 C80,426 68,424 68,415 L66,345 L60,255 C54,232 56,212 62,195 L58,130 C52,148 46,190 41,220 C37,228 29,225 30,215 C32,175 36,126 42,110 C48,94 72,88 87,84 L87,72 C82,66 76,57 75,44 C74,26 84,14 100,14 Z"
+                                      fill="rgba(56, 189, 248, 0.12)" stroke="#0284c7" stroke-width="1.5"/>
+
+                                <!-- ESQUELETO RADIOLÓGICO INTERNO -->
+                                <g filter="url(#glow)" stroke="#bae6fd" fill="none">
+                                    <!-- Cráneo y Macizo Facial -->
+                                    <ellipse cx="100" cy="38" rx="19" ry="22" fill="url(#xrayGlow)" stroke="#e0f2fe" stroke-width="2"/>
+                                    <!-- Órbitas y Cavidad Nasal -->
+                                    <circle cx="93" cy="40" r="4" fill="#030712" stroke="#7dd3fc" stroke-width="1"/>
+                                    <circle cx="107" cy="40" r="4" fill="#030712" stroke="#7dd3fc" stroke-width="1"/>
+                                    <polygon points="100,43 97,50 103,50" fill="#030712"/>
+                                    <!-- Mandíbula -->
+                                    <path d="M86,48 Q100,66 114,48" stroke="#e0f2fe" stroke-width="2.2" fill="none"/>
+
+                                    <!-- Hueso Hioides y Columna Cervical (C1-C7) -->
+                                    <path d="M92,70 Q100,74 108,70" stroke="#00f5d4" stroke-width="2.2"/>
+                                    <line x1="100" y1="60" x2="100" y2="95" stroke="#e0f2fe" stroke-width="5" stroke-dasharray="4,2"/>
+
+                                    <!-- Clavículas -->
+                                    <path d="M98,95 Q75,88 52,102" stroke="#e0f2fe" stroke-width="3"/>
+                                    <path d="M102,95 Q125,88 148,102" stroke="#e0f2fe" stroke-width="3"/>
+
+                                    <!-- Esternón y Columna Toraco-Lumbar -->
+                                    <line x1="100" y1="95" x2="100" y2="215" stroke="#e0f2fe" stroke-width="6" stroke-dasharray="5,2"/>
+                                    <line x1="100" y1="98" x2="100" y2="155" stroke="#ffffff" stroke-width="4"/>
+
+                                    <!-- Parrilla Costal (Costillas Bilaterales) -->
+                                    <path d="M100,104 Q72,106 68,120 M100,114 Q68,116 64,132 M100,124 Q66,128 63,144 M100,134 Q68,138 66,156 M100,144 Q72,150 70,166 M100,154 Q76,160 75,174" stroke="#bae6fd" stroke-width="2"/>
+                                    <path d="M100,104 Q128,106 132,120 M100,114 Q132,116 136,132 M100,124 Q134,128 137,144 M100,134 Q132,138 134,156 M100,144 Q128,150 130,166 M100,154 Q124,160 125,174" stroke="#bae6fd" stroke-width="2"/>
+
+                                    <!-- Húmeros, Radios y Cúbitos -->
+                                    <line x1="52" y1="104" x2="44" y2="162" stroke="#e0f2fe" stroke-width="4"/>
+                                    <line x1="44" y1="164" x2="36" y2="215" stroke="#bae6fd" stroke-width="3"/>
+                                    <line x1="148" y1="104" x2="156" y2="162" stroke="#e0f2fe" stroke-width="4"/>
+                                    <line x1="156" y1="164" x2="164" y2="215" stroke="#bae6fd" stroke-width="3"/>
+
+                                    <!-- Cintura Pélvica (Ilion, Isquion, Pubis y Sacro) -->
+                                    <path d="M100,212 L88,212 C68,205 62,228 72,248 C80,260 94,258 100,252 C106,258 120,260 128,248 C138,228 132,205 112,212 Z"
+                                          fill="url(#xrayGlow)" stroke="#e0f2fe" stroke-width="2.2"/>
+                                    <circle cx="84" cy="242" r="6" fill="#030712" stroke="#7dd3fc" stroke-width="1.5"/>
+                                    <circle cx="116" cy="242" r="6" fill="#030712" stroke="#7dd3fc" stroke-width="1.5"/>
+
+                                    <!-- Fémures, Rótulas, Tibias y Peronés -->
+                                    <line x1="76" y1="246" x2="80" y2="330" stroke="#e0f2fe" stroke-width="5.5"/>
+                                    <circle cx="80" cy="334" r="4" fill="#ffffff"/>
+                                    <line x1="80" y1="338" x2="78" y2="412" stroke="#e0f2fe" stroke-width="4.5"/>
+                                    <line x1="75" y1="340" x2="74" y2="410" stroke="#7dd3fc" stroke-width="2"/>
+
+                                    <line x1="124" y1="246" x2="120" y2="330" stroke="#e0f2fe" stroke-width="5.5"/>
+                                    <circle cx="120" cy="334" r="4" fill="#ffffff"/>
+                                    <line x1="120" y1="338" x2="122" y2="412" stroke="#e0f2fe" stroke-width="4.5"/>
+                                    <line x1="125" y1="340" x2="126" y2="410" stroke="#7dd3fc" stroke-width="2"/>
+                                </g>
+
+                                <!-- Marcador Dinámico del Foco Lesional en el Cuerpo -->
+                                <circle id="scout-foco-target" cx="100" cy="40" r="9" fill="rgba(255, 42, 42, 0.35)" stroke="#ff2a2a" stroke-width="2" stroke-dasharray="3,2"/>
                             </svg>
                         </div>
                     </div>
@@ -667,15 +833,16 @@
                     <div class="virt-panel">
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
                             <h4 style="margin:0; color:#38bdf8;">2. Monitor Multiplanar PMCT</h4>
-                            <div style="display:flex; gap:6px;">
+                            <div style="display:flex; gap:6px; flex-wrap:wrap;">
                                 <button class="btn-ventana activa" onclick="aplicarVentanaVirt('osea', this)">Ventana Ósea</button>
                                 <button class="btn-ventana" onclick="aplicarVentanaVirt('pulmonar', this)">Parénquima / Aire</button>
                                 <button class="btn-ventana" onclick="aplicarVentanaVirt('metal', this)">Filtro Balístico/Metal</button>
+                                <button class="btn-ventana" onclick="ampliarMonitorVirtuopsia()"><i class="fas fa-expand"></i> Ampliar</button>
                             </div>
                         </div>
 
                         <div class="virt-monitor">
-                            <img id="virt-img-display" src="img/tc-craneo-bala.jpg" alt="Monitor Virtuopsia">
+                            <img id="virt-img-display" src="img/tc-craneo-bala.jpg" alt="Monitor Virtuopsia" onclick="ampliarMonitorVirtuopsia()">
                             <div class="hud-overlay" id="virt-hud">
                                 PMCT UCE-FORENSE<br>
                                 KV: 120 | mAs: 280<br>
@@ -702,11 +869,11 @@
                             <div style="font-size:0.85em; margin-top:6px; line-height:1.7;">
                                 <label><input type="checkbox" id="chk-1"> Exportación DICOM con hash criptográfico</label><br>
                                 <label><input type="checkbox" id="chk-2"> Fijación topográfica de indicios radiopacos</label><br>
-                                <label><input type="checkbox" id="chk-3"> Correlación antes de apertura de cavidades</label>
+                                <label><input type="checkbox" id="chk-3"> Escaneo previo a la apertura de cavidades</label>
                             </div>
                         </div>
 
-                        <button class="btn-action" style="width:100%; background:#00b4d8; color:#000;" onclick="validarVirtuopsia()">
+                        <button class="btn-action" style="width:100%; background:#00b4d8; color:#000; justify-content:center;" onclick="validarVirtuopsia()">
                             <i class="fas fa-file-signature"></i> Emitir Informe Pericial de Virtuopsia
                         </button>
 
@@ -717,21 +884,74 @@
         </section>
 
         <!-- ==========================================================
-             4. NEGATOSCOPIO DICOM (LOS 10 CASOS CON SLIDERS)
+             4. NUEVA PESTAÑA: LABORATORIO DE TÉCNICAS ANATÓMICAS (FMV)
+        =========================================================== -->
+        <section id="sec-anatomia" class="seccion">
+            <div class="lab-hero">
+                <span style="background:#00b4d8; color:#000; padding:4px 12px; border-radius:12px; font-weight:bold; font-size:0.82em;">CONVENIO ACADÉMICO INTERINSTITUCIONAL (FMV - UCE)</span>
+                <h2 style="margin:10px 0 8px;"><i class="fas fa-flask"></i> Laboratorio de Técnicas Anatómicas y Preservación Aplicada a la Radiología Forense</h2>
+                <p style="margin:0; opacity:0.95; line-height:1.6;">Espacio de innovación docente donde las técnicas de conservación biológica (Plastinación en frío, Técnica de Elnady, Alcohol-Propilenglicol) y la Manufactura Aditiva 3D se fusionan con el diagnóstico por imagen para entrenar la identificación de lesiones médico-legales sin riesgo biológico.</p>
+            </div>
+
+            <h3><i class="fas fa-hand-pointer"></i> 1. Selecciona una Técnica de Conservación o Biomodelado para explorar su protocolo:</h3>
+            <div class="tecnicas-selector-bar">
+                <button class="btn-tec-select activa" onclick="mostrarFichaAnatomica(0, this)">
+                    <h4><i class="fas fa-snowflake"></i> Plastinación en Frío</h4>
+                    <small>Impregnación polimérica al vacío para cortes tomográficos permanentes.</small>
+                </button>
+                <button class="btn-tec-select" onclick="mostrarFichaAnatomica(1, this)">
+                    <h4><i class="fas fa-bone"></i> Técnica de Elnady</h4>
+                    <small>Preservación flexible a temperatura ambiente para biomecánica traumática.</small>
+                </button>
+                <button class="btn-tec-select" onclick="mostrarFichaAnatomica(2, this)">
+                    <h4><i class="fas fa-vial"></i> Alcohol-Propilenglicol</h4>
+                    <small>Conservación ecológica de paquetes viscerales y tejidos blandos.</small>
+                </button>
+                <button class="btn-tec-select" onclick="mostrarFichaAnatomica(3, this)">
+                    <h4><i class="fas fa-cubes"></i> Manufactura Aditiva 3D</h4>
+                    <small>Impresión FDM y SLA a partir de segmentación DICOM forense.</small>
+                </button>
+            </div>
+
+            <!-- Contenedor Dinámico de la Ficha Técnica -->
+            <div id="contenedor-ficha-anatomica" class="ficha-tecnica-anatomica"></div>
+
+            <!-- Simulador de Densidades Hounsfield (UH) en Especímenes Conservados -->
+            <div class="simulador-uh-box">
+                <h3 style="margin-top:0; color:#38bdf8;"><i class="fas fa-sliders-h"></i> 2. Simulador de Atenuación Radiológica (Unidades Hounsfield - UH) en Biomodelos</h3>
+                <p style="color:#cbd5e1; font-size:0.95em;">Antes de escanear una pieza anatómica conservada o impresa en 3D para una práctica forense, calibra los parámetros del equipo para obtener el máximo contraste diagnóstico:</p>
+
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-top:15px;">
+                    <div>
+                        <label style="font-weight:bold; color:#00f5d4; display:block; margin-bottom:8px;">Selecciona el Espécimen del Laboratorio:</label>
+                        <select id="select-uh-especimen" onchange="calcularParametrosUH()" style="width:100%; padding:12px; border-radius:8px; background:#131c2e; color:#fff; border:1px solid #38bdf8; font-weight:bold;">
+                            <option value="0">Corte Encefálico / Órgano en Plastinación en Frío (Silicona S10)</option>
+                            <option value="1">Bloque Cardiorrespiratorio en Técnica de Elnady (Glicerina/Silicona)</option>
+                            <option value="2">Paquete Visceral en Alcohol-Propilenglicol con Proyectil Alojado</option>
+                            <option value="3">Cráneo Forense Impreso en 3D (Filamento PLA / Resina SLA)</option>
+                        </select>
+                    </div>
+                    <div id="resultado-uh-panel" style="background:#131c2e; padding:18px; border-radius:10px; border-left:4px solid #00f5d4;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================
+             5. NEGATOSCOPIO DICOM (LOS 10 CASOS CON SLIDERS)
         =========================================================== -->
         <section id="sec-atlas" class="seccion">
             <h2><i class="fas fa-x-ray"></i> Repositorio de Casos Radiológicos Forenses</h2>
-            <p>Ajusta el brillo, contraste e inversión polar de cada estudio radiológico para inspeccionar fracturas, biseles e indicios metálicos.</p>
+            <p>Ajusta el brillo, contraste e inversión polar de cada estudio radiológico o haz clic sobre cualquier placa para ampliarla en pantalla completa.</p>
             <div style="margin-bottom:20px; display:flex; gap:10px; flex-wrap:wrap;" id="filtros-atlas-bar"></div>
             <div class="grid-atlas" id="grid-atlas-cards"></div>
         </section>
 
         <!-- ==========================================================
-             5. ARTÍCULOS CIENTÍFICOS VERIFICADOS Y BIBLIOGRAFÍA
+             6. ARTÍCULOS CIENTÍFICOS VERIFICADOS Y BIBLIOGRAFÍA
         =========================================================== -->
         <section id="sec-articulos" class="seccion">
             <h2><i class="fas fa-book-reader"></i> Evidencia Científica Verificada (PubMed / DOI) y Bibliografía Oficial</h2>
-            <p>Selección curada de literatura científica internacional revisada por pares sobre Virtuopsia, Tomografía Post-Mortem (PMCT) y Radiología Forense, junto con los textos oficiales del Syllabus.</p>
+            <p>Selección curada de literatura científica internacional revisada por pares sobre Virtuopsia, Tomografía Post-Mortem (PMCT), Conservación Anatómica y Radiología Forense.</p>
 
             <div class="articulos-grid" id="contenedor-articulos"></div>
 
@@ -746,36 +966,167 @@
         </section>
     </main>
 
-    <!-- MODAL PANTALLA COMPLETA -->
+    <!-- MODAL UNIVERSAL DE PANTALLA COMPLETA -->
     <div id="modal-zoom" class="modal-overlay" onclick="cerrarModalZoom()">
         <div class="modal-card" onclick="event.stopPropagation()">
-            <div style="padding:15px 20px; background:#090d16; display:flex; justify-content:space-between; align-items:center;">
-                <strong id="modal-zoom-titulo">Inspección Forense</strong>
-                <button class="btn-acc" onclick="cerrarModalZoom()">Cerrar ✖</button>
+            <div style="padding:15px 22px; background:#090d16; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #1e293b;">
+                <strong id="modal-zoom-titulo" style="font-size:1.15em; color:#38bdf8;">Inspección Forense</strong>
+                <button class="btn-acc" style="background:#d9381e; border:none;" onclick="cerrarModalZoom()"><i class="fas fa-times"></i> Cerrar Monitor</button>
             </div>
-            <div style="padding:20px; text-align:center;">
-                <img id="modal-zoom-img" src="" alt="Placa" style="max-width:100%; max-height:68vh; border-radius:8px;">
-                <p id="modal-zoom-desc" style="margin-top:12px; color:#cbd5e1;"></p>
+            <div style="padding:25px; text-align:center; background:#000;">
+                <img id="modal-zoom-img" src="" alt="Placa Radiológica Ampliada" style="max-width:100%; max-height:68vh; border-radius:8px; border:1px solid #334155;">
+                <p id="modal-zoom-desc" style="margin-top:15px; color:#e2e8f0; font-size:1em; line-height:1.5; max-width:800px; margin-left:auto; margin-right:auto;"></p>
             </div>
         </div>
     </div>
 
     <!-- ==========================================================
-         SCRIPT MAESTRO: 16 SEMANAS, VIRTUOPSIA, JUEGOS Y ATLAS
+         SCRIPT MAESTRO: 100% LIBRE DE ERRORES DE COMILLAS
     =========================================================== -->
     <script>
-        // --- 1. INFORMACIÓN DEL CONVENIO FMV ---
-        const datosFMV = [
-            "<strong>Plastinación en Frío:</strong> Reemplazo de líquidos tisulares por polímeros curables bajo frío. Permite conservar cortes tomográficos reales con densidad radiológica intacta y bioseguridad total para los estudiantes.",
-            "<strong>Técnica de Elnady:</strong> Deshidratación ypregnación glicerina-acetona-silicona a temperatura ambiente. Produce especímenes flexibles ideales para simular luxaciones cervicales y traumas articulares.",
-            "<strong>Alcohol-Propilenglicol:</strong> Preservación ecológica libre de vapores de formalina que mantiene la textura blanda visceral para estudiar trayectos de heridas punzocortantes y contusiones profundas.",
-            "<strong>Manufactura Aditiva 3D (FDM y SLA):</strong> Segmentación de archivos DICOM de fracturas forenses para impresión 3D a escala real (1:1), fundamental como evidencia demostrativa en audiencias judiciales."
+        // --- 1. FICHAS DETALLADAS DEL LABORATORIO DE TÉCNICAS ANATÓMICAS (FMV) ---
+        const fichasTecnicasAnatomicas = [
+            {
+                nombre: "Plastinación en Frío (Protocolo Biodur / Silicona)",
+                subtitulo: "Conservación tisular mediante reemplazo de agua y lípidos por polímeros curables bajo vacío a bajas temperaturas (-25 °C).",
+                descripcion: "La plastinación en frío permite obtener especímenes anatómicos secos, inodoros, duraderos y 100% libres de toxicidad por formaldehído, manteniendo intacta la citoarquitectura y las relaciones topográficas.",
+                pasos: [
+                    { fase: "1. Fijación y Disección", detalle: "Estabilización tisular y corte seriado (ej. cortes axiales o coronales de encéfalo, corazón o miembros) con sierra de precisión." },
+                    { fase: "2. Deshidratación en Frío", detalle: "Inmersión en baños sucesivos de acetona pura a -25 °C (congelación-sustitución) que extrae el agua intracelular sin retracción." },
+                    { fase: "3. Impregnación Forzada", detalle: "En cámara de vacío, la acetona volátil se evapora y es reemplazada lentamente por polímero de silicona o resina epóxica." },
+                    { fase: "4. Curado (Polimerización)", detalle: "Exposición a gas endurecedor que solidifica el polímero preservando la pieza de forma indefinida." }
+                ],
+                aplicacionForense: [
+                    "<strong>Correlación Tomográfica (PMCT vs. Corte Plastinado):</strong> Los cortes encefálicos o torácicos plastinados permiten a los estudiantes de séptimo semestre comparar milímetro a milímetro la placa tomográfica con el corte biológico real.",
+                    "<strong>Simulación Balística y de Fracturas:</strong> Permite conservar especímenes con trayectos reales de heridas o fracturas óseas para observar el comportamiento de la densidad radiológica (Unidades Hounsfield) en el tomógrafo.",
+                    "<strong>Docencia Segura:</strong> Al no emitir vapores tóxicos, las piezas plastinadas pueden llevarse directamente a la sala de rayos X o al aula de lectura de imágenes."
+                ],
+                actividadPAE: "Escanear un órgano plastinado en proyecciones ortogonales, medir su radiodensidad y correlacionar los reparos internos con la anatomía seccional."
+            },
+            {
+                nombre: "Técnica de Elnady (Conservación Flexible a Temperatura Ambiente)",
+                subtitulo: "Método innovador, económico y libre de cámaras de frío que preserva la flexibilidad y biomecánica articular.",
+                descripcion: "Desarrollada por el Dr. Fawzy Elnady, utiliza fijación previa, deshidratación en acetona a temperatura ambiente, impregnación en glicerina y sellado final con almidón de maíz (maicena), logrando piezas blandas, elásticas y sin olor.",
+                pasos: [
+                    { fase: "1. Fijación", detalle: "Fijación inicial de la pieza anatómica y lavado exhaustivo para eliminar restos de fijador." },
+                    { fase: "2. Deshidratación Ambiente", detalle: "Baños de acetona a temperatura ambiente controlando el grado de pureza con acetonómetro." },
+                    { fase: "3. Impregnación en Glicerina", detalle: "Inmersión en glicerina pura que penetra en los tejidos y les confiere alta elasticidad y suavidad." },
+                    { fase: "4. Curado con Maicena", detalle: "Frotado y reposo en polvo de almidón de maíz para absorber el exceso superficial de glicerina, dejando una textura seca y flexible." }
+                ],
+                aplicacionForense: [
+                    "<strong>Biomecánica del Trauma y Asfixias:</strong> Al conservar la elasticidad de ligamentos, tráquea, laringe y cápsulas articulares, permite simular mecanismos de hiperextensión cervical (latigazo), estrangulación y luxaciones.",
+                    "<strong>Entrenamiento en Posicionamiento Radiológico:</strong> A diferencia de las piezas rígidas, los especímenes en Elnady pueden flexionarse o rotarse en el chasis detector para practicar proyecciones forenses complejas.",
+                    "<strong>Evaluación de Heridas por Arma Blanca:</strong> Permite practicar la introducción de marcadores radiopacos en trayectos punzocortantes sobre tejido blando flexible."
+                ],
+                actividadPAE: "Realizar tomas radiológicas dinámicas (flexión y extensión) de un bloque cervical o miembro conservado en Elnady para analizar espacios intervertebrales y articulares."
+            },
+            {
+                nombre: "Técnica de Alcohol-Propilenglicol (Conservación Húmeda Ecológica)",
+                subtitulo: "Sustitución de soluciones formoladas por mezclas de etanol, propilenglicol y sales conservantes de baja toxicidad.",
+                descripcion: "Elimina los riesgos carcinogénicos e irritantes del formaldehído en los laboratorios universitarios, manteniendo la coloración, el volumen visceral y la radiodensidad cercana al tejido fresco.",
+                pasos: [
+                    { fase: "1. Lavado de Desformolización", detalle: "Eliminación gradual del fijador primario mediante corriente de agua controlada." },
+                    { fase: "2. Inmersión en Propilenglicol", detalle: "Equilibrio osmótico en solución hidroalcohólica con propilenglicol que actúa como humectante y fungistático." },
+                    { fase: "3. Conservación de Textura", detalle: "Mantenimiento de la turgencia de órganos parenquimatosos (hígado, bazo, riñón, pulmón)." },
+                    { fase: "4. Almacenamiento Seguro", detalle: "Disposición en contenedores herméticos listos para manipulación directa en prácticas de PAE." }
+                ],
+                aplicacionForense: [
+                    "<strong>Radiodensidad Fisiológica:</strong> A diferencia de los tejidos desecados, los órganos en alcohol-propilenglicol mantienen una atenuación de rayos X muy similar al tejido humano fresco en una autopsia real.",
+                    "<strong>Simulación de Indicios Balísticos y Metálicos:</strong> Ideal para alojar perdigones, proyectiles o puntas metálicas de cuchillos dentro de paquetes viscerales y practicar su localización radiológica tridimensional.",
+                    "<strong>Estudio de Contusiones Profundas:</strong> Permite observar laceraciones viscerales internas y correlacionarlas con ecografía o tomografía."
+                ],
+                actividadPAE: "Localizar mediante radiografía ortogonal (AP y Lateral) fragmentos metálicos ocultos en un paquete visceral conservado en alcohol-propilenglicol."
+            },
+            {
+                nombre: "Manufactura Aditiva e Impresión Biomédica 3D (FDM y SLA)",
+                subtitulo: "Reconstrucción digital de archivos DICOM forenses e impresión tridimensional a escala real (1:1).",
+                descripcion: "Combina el procesamiento de imágenes médicas (segmentación de umbrales óseos y exportación a mallas STL/OBJ) con impresoras de deposición fundida (FDM) y estereolitografía de resina (SLA) para materializar lesiones óseas.",
+                pasos: [
+                    { fase: "1. Adquisición DICOM", detalle: "Obtención de cortes tomográficos finos (0.5 a 1.0 mm) del cráneo, pelvis o hueso fracturado." },
+                    { fase: "2. Segmentación 3D", detalle: "Aislamiento digital del tejido óseo o del proyectil mediante umbralización de Unidades Hounsfield." },
+                    { fase: "3. Preparación (Slicing)", detalle: "Generación de soportes y código G para impresoras FDM (PLA/PETG) o SLA (resina fotopolimérica de alta precisión)." },
+                    { fase: "4. Post-procesado Pericial", detalle: "Curado UV y acabado del biomodelo a escala milimétrica 1:1 para docencia o peritaje." }
+                ],
+                aplicacionForense: [
+                    "<strong>Evidencia Demostrativa en Juicio Oral:</strong> Permite presentar ante jueces y fiscales el cráneo impreso en 3D con el orificio de entrada (bisel interno) o la fractura por hundimiento sin necesidad de llevar restos biológicos al tribunal.",
+                    "<strong>Reconstrucción de Fragmentos Conminutos:</strong> Facilita el ensamblaje físico de fracturas complejas de tránsito o armas de fuego y el cotejo físico con el objeto contundente sospechoso.",
+                    "<strong>Diseño de Bolus y Fantomas Radiológicos:</strong> Creación de modelos antropomórficos con densidades controladas para calibración radiológica."
+                ],
+                actividadPAE: "Analizar la reconstrucción 3D de una fractura craneal o tibial e identificar en el biomodelo impreso el punto de impacto, el bisel y las líneas de fractura de alivio."
+            }
         ];
 
-        function seleccionarTecnicaFMV(idx, el) {
-            document.querySelectorAll('.tecnica-card').forEach(c => c.classList.remove('activa'));
-            el.classList.add('activa');
-            document.getElementById('info-fmv-detalle').innerHTML = datosFMV[idx];
+        const datosSimuladorUH = [
+            {
+                rangoUH: "+40 a +95 UH (Parénquima siliconado) / -800 UH (Espacios aéreos)",
+                parametros: "kVp recomendado: 90 - 110 kV | mAs: 120 - 160 | Ventana: Partes blandas / Cerebro",
+                observacion: "La silicona curada aumenta ligeramente la atenuación respecto al tejido fresco. Excelente contraste entre sustancia gris/blanca y cavidades ventriculares sin artefactos por gas de putrefacción."
+            },
+            {
+                rangoUH: "+20 a +70 UH (Tejido blando flexible en glicerina) / +850 UH (Hueso/Cartílago)",
+                parametros: "kVp recomendado: 75 - 95 kV | mAs: 80 - 110 | Ventana: Osteoarticular / Cuello",
+                observacion: "La impregnación con glicerina preserva una densidad radiológica homogénea en músculos y ligamentos, permitiendo visualizar con gran nitidez el hueso hioides y los espacios intervertebrales."
+            },
+            {
+                rangoUH: "+10 a +50 UH (Parénquima húmedo) / > +3000 UH (Proyectil plomo/latón)",
+                parametros: "kVp recomendado: 120 - 140 kV | Activar algoritmo de reducción de artefacto metálico (MAR)",
+                observacion: "El líquido conservante simula el agua corporal normal. Al existir un proyectil metálico, se producirá el clásico 'artefacto en estrella' (beam hardening), idéntico a un caso forense real."
+            },
+            {
+                rangoUH: "+120 a +350 UH (Polímero PLA/Resina según % de relleno Infill)",
+                parametros: "kVp recomendado: 70 - 85 kV | Grosor de corte: 0.6 mm | Ventana: Ósea de alta resolución",
+                observacion: "En modelos impresos en FDM, el patrón geométrico interno (infill de panal o rejilla) es visible en la TC; en modelos de resina SLA la estructura es sólida y reproduce microfracturas con precisión submilimétrica."
+            }
+        ];
+
+        function mostrarFichaAnatomica(idx, boton) {
+            document.querySelectorAll('.btn-tec-select').forEach(b => b.classList.remove('activa'));
+            boton.classList.add('activa');
+            const f = fichasTecnicasAnatomicas[idx];
+
+            let pasosHTML = '';
+            f.pasos.forEach(p => {
+                pasosHTML += `
+                    <div class="paso-item">
+                        <strong style="color:var(--secondary); display:block; margin-bottom:6px;">${p.fase}</strong>
+                        <span style="font-size:0.9em; line-height:1.4; display:block;">${p.detalle}</span>
+                    </div>
+                `;
+            });
+
+            let appHTML = '';
+            f.aplicacionForense.forEach(ap => {
+                appHTML += `<li style="margin-bottom:8px;">${ap}</li>`;
+            });
+
+            document.getElementById('contenedor-ficha-anatomica').innerHTML = `
+                <h2 style="margin-top:0; color:var(--primary);">${f.nombre}</h2>
+                <p style="font-size:1.05em; color:var(--secondary); font-weight:600; margin-top:-6px;">${f.subtitulo}</p>
+                <p style="line-height:1.6;">${f.descripcion}</p>
+
+                <h4 style="margin-bottom:10px; color:var(--primary);"><i class="fas fa-project-diagram"></i> Flujo de Trabajo en el Laboratorio:</h4>
+                <div class="pasos-flujo">${pasosHTML}</div>
+
+                <div style="background:rgba(30,86,160,0.07); border-left:5px solid var(--secondary); padding:18px; border-radius:8px; margin-top:20px;">
+                    <h4 style="margin-top:0; color:var(--secondary);"><i class="fas fa-crosshairs"></i> Aplicación Directa en Radiología Forense:</h4>
+                    <ul style="line-height:1.6; margin-bottom:0;">${appHTML}</ul>
+                </div>
+
+                <div style="background:rgba(43,138,62,0.1); border-left:5px solid var(--success); padding:15px; border-radius:8px; margin-top:15px;">
+                    <strong><i class="fas fa-clipboard-list"></i> Práctica de Aplicación y Experimentación (PAE) Sugerida:</strong><br>
+                    ${f.actividadPAE}
+                </div>
+            `;
+        }
+
+        function calcularParametrosUH() {
+            const idx = parseInt(document.getElementById('select-uh-especimen').value);
+            const d = datosSimuladorUH[idx];
+            document.getElementById('resultado-uh-panel').innerHTML = `
+                <div style="margin-bottom:8px;"><strong style="color:#38bdf8;">Densidad Estimada en TC:</strong> ${d.rangoUH}</div>
+                <div style="margin-bottom:8px;"><strong style="color:#00f5d4;">Protocolo Técnico:</strong> ${d.parametros}</div>
+                <div style="font-size:0.9em; color:#e2e8f0; line-height:1.5;"><strong>Comportamiento Radiológico:</strong> ${d.observacion}</div>
+            `;
         }
 
         // --- 2. PLANIFICACIÓN COMPLETA DE LAS 16 SEMANAS SEGÚN EL SYLLABUS ---
@@ -786,7 +1137,7 @@
                 titulo: "Concepto de Medicina Legal e Informe Pericial",
                 contenido: "Concepto y modalidades de la Medicina Legal, su ubicación en las ciencias médicas y su rol como auxiliar de la justicia. Estructura legal del Informe Pericial radiológico (Parte inicial, exposición de hechos, discusión médico-legal y conclusiones).",
                 pae: "Elaborar una pericia médico-legal cumpliendo todas las partes estipuladas en la legislación ecuatoriana vigente (COIP).",
-                tip: "Nunca emitas juicios de valor jurídico ('hubo intención de matar') en un informe radiológico; el perito describe hallazgos objetivos ('solución de continuidad ósea con bisel interno').",
+                tip: "Nunca emitas juicios de valor jurídico (como afirmar dolo o intención) en un informe radiológico; el perito describe hallazgos objetivos (solución de continuidad ósea con bisel interno).",
                 imagen: "img/tc-craneo-bala.jpg",
                 retoPregunta: "Ordena mentalmente: ¿Cuál es la sección del Informe Pericial donde el radiólogo sintetiza de forma categórica el mecanismo de lesión para el fiscal?",
                 retoOpciones: ["A) Preámbulo administrativo", "B) Conclusiones médico-legales", "C) Etiqueta del sobre DICOM"],
@@ -839,7 +1190,7 @@
                 pae: "Elaboración de un cuadro técnico con ejemplos de indicios en una autopsia médico-legal y su respectivo manejo criminalístico.",
                 tip: "El escaneo radiológico o PMCT SIEMPRE debe realizarse antes de abrir el cadáver (con el cuerpo dentro de la bolsa mortuoria sellada) para no desplazar proyectiles ni alterar fracturas cervicales.",
                 imagen: "img/rx-perdigones.jpg",
-                retoPregunta: "¿Cuándo se cataloga técnicamente a una autopsia como 'Blanca o Negativa'?",
+                retoPregunta: "¿Cuándo se cataloga técnicamente a una autopsia como Blanca o Negativa?",
                 retoOpciones: ["A) Cuando las radiografías salen sobreexpuestas", "B) Cuando tras el examen macroscópico, radiológico, histológico y toxicológico no se halla la causa de muerte", "C) Cuando el cadáver no presenta heridas por arma de fuego"],
                 retoCorrecta: 1,
                 retoFeedback: "¡Correcto! Es aquella donde todos los estudios complementarios resultan negativos para explicar el deceso.",
@@ -888,7 +1239,7 @@
                 titulo: "Contusiones con Derrame y Contusiones Profundas",
                 contenido: "Estudio de equimosis, hematomas y bolsas sanguíneas. Contusiones profundas sin herida cutánea externa (laceraciones viscerales, hematomas retroperitoneales y extradurales observables por tomografía).",
                 pae: "Elaboración de un esquema técnico del mecanismo de producción de las contusiones profundas analizadas en clase.",
-                tip: "En la pared abdominal o torácica, la piel elástica puede quedar intacta tras un golpe severo ('contusión profunda sin herida externa'), pero la TC revelará estallido esplénico, hepático o hemotórax.",
+                tip: "En la pared abdominal o torácica, la piel elástica puede quedar intacta tras un golpe severo (contusión profunda sin herida externa), pero la TC revelará estallido esplénico, hepático o hemotórax.",
                 imagen: "img/rx-trauma-pelvico.jpg",
                 retoPregunta: "En una TC craneal forense observas una colección hemática biconvexa (en forma de lente) que no cruza las suturas craneales. ¿A qué corresponde?",
                 retoOpciones: ["A) Hematoma epidural (extradural) agudo", "B) Quiste aracnoideo congénito", "C) Artefacto de movimiento"],
@@ -910,7 +1261,7 @@
                 retoPregunta: "Una fractura craneal deprimida que reproduce exactamente la forma circular de la cabeza de un martillo se denomina en medicina legal:",
                 retoOpciones: ["A) Fractura en firma o terraza (lesión figurada)", "B) Fractura en tallo verde fisiológica", "C) Fractura patológica por osteoporosis"],
                 retoCorrecta: 0,
-                retoFeedback: "¡Impecable! Las fracturas por hundimiento con objetos de superficie pequeña dejan el molde o 'firma' del arma contundente en la tabla ósea.",
+                retoFeedback: "¡Impecable! Las fracturas por hundimiento con objetos de superficie pequeña dejan el molde o firma del arma contundente en la tabla ósea.",
                 quiz: [
                     { q: "¿Qué característica morfológica distingue a una herida contusa de una herida cortante?", o: ["La presencia de puentes dérmicos/fibrosos entre los bordes irregulares de la herida", "Bordes perfectamente lineales y limpios sin equimosis", "Un halo de tatuaje de pólvora"], a: 0 },
                     { q: "En el cráneo, según la Ley de Puppe, cuando se producen dos impactos sucesivos:", o: ["Las líneas de fractura del segundo impacto se detienen al encontrar las líneas del primer impacto", "El cráneo se regenera instantáneamente", "Ambos impactos desaparecen en la TC"], a: 0 }
@@ -947,7 +1298,7 @@
                 retoFeedback: "¡Brillante! Al salir del cráneo, el proyectil empuja la tabla externa hacia afuera, creando el bisel externo característico del orificio de salida.",
                 quiz: [
                     { q: "¿Cómo se denomina al conjunto del halo de contusión más el halo de enjugamiento en el orificio de entrada?", o: ["Anillo o Halo de Fisch", "Signo de Tardieu", "Triángulo de Messerer"], a: 0 },
-                    { q: "En una radiografía de cráneo, el 'Signo del Embudo o Cono Truncado de Bonnet' sirve para:", o: ["Determinar el sentido de la trayectoria y distinguir el orificio de entrada del de salida", "Conocer el nombre del fabricante del arma", "Medir la alcoholemia de la víctima"], a: 0 }
+                    { q: "En una radiografía de cráneo, el Signo del Embudo o Cono Truncado de Bonnet sirve para:", o: ["Determinar el sentido de la trayectoria y distinguir el orificio de entrada del de salida", "Conocer el nombre del fabricante del arma", "Medir la alcoholemia de la víctima"], a: 0 }
                 ]
             },
             {
@@ -959,12 +1310,12 @@
                 tip: "En la radiografía de un trayecto balístico, las pequeñas esquirlas metálicas y fragmentos óseos desprendidos quedan sembrados a lo largo del canal siguiendo la dirección del proyectil.",
                 imagen: "img/rx-perdigones.jpg",
                 retoPregunta: "En una radiografía torácica observas 60 perdigones concentrados en un área circular de apenas 4 cm de diámetro con fractura costal masiva. ¿A qué distancia se produjo el disparo?",
-                retoOpciones: ["A) Larga distancia (más de 25 metros)", "B) Corta distancia (los perdigones aún actuaban en masa o 'bala loca')", "C) Disparo de arma de aire comprimido"],
+                retoOpciones: ["A) Larga distancia (más de 25 metros)", "B) Corta distancia (los perdigones aún actuaban en masa o bala loca)", "C) Disparo de arma de aire comprimido"],
                 retoCorrecta: 1,
                 retoFeedback: "¡Exacto! En disparos de escopeta a menos de 1 metro, la carga aún no se dispersa y penetra como una sola masa destructiva.",
                 quiz: [
-                    { q: "¿Qué es el 'Signo de Benassi' en los disparos a cañón tocante o contacto firme?", o: ["El anillo de ahumamiento negro depositado directamente sobre el periostio/hueso bajo la piel", "La dispersión amplia de perdigones", "La fractura del peroné"], a: 0 },
-                    { q: "En radiología forense, la 'Rosa de Dispersión de Cevidalli' de los perdigones permite calcular:", o: ["La distancia aproximada a la que se efectuó el disparo de escopeta", "La hora exacta de la muerte", "El grupo sanguíneo del cadáver"], a: 0 }
+                    { q: "¿Qué es el Signo de Benassi en los disparos a cañón tocante o contacto firme?", o: ["El anillo de ahumamiento negro depositado directamente sobre el periostio/hueso bajo la piel", "La dispersión amplia de perdigones", "La fractura del peroné"], a: 0 },
+                    { q: "En radiología forense, la Rosa de Dispersión de Cevidalli de los perdigones permite calcular:", o: ["La distancia aproximada a la que se efectuó el disparo de escopeta", "La hora exacta de la muerte", "El grupo sanguíneo del cadáver"], a: 0 }
                 ]
             },
             {
@@ -976,7 +1327,7 @@
                 tip: "En la fase de choque del atropellamiento, mide siempre la distancia desde la planta del pie hasta la fractura tibial (fractura de parachoques): si es muy baja con respecto a la altura normal del vehículo, indica que el conductor aplicó frenado brusco de emergencia.",
                 imagen: "img/rx-tibia-parachoques.jpg",
                 retoPregunta: "Un ocupante de vehículo presenta luxofractura posterior de la cabeza femoral con fractura de la ceja cotiloidea del acetábulo en la RX de pelvis. ¿Cuál fue el mecanismo?",
-                retoOpciones: ["A) Impacto de la rodilla flexionada contra el tablero del auto en colisión frontal ('fractura del salpicadero')", "B) Caída de pie desde un escalón", "C) Estrangulación a lazo"],
+                retoOpciones: ["A) Impacto de la rodilla flexionada contra el tablero del auto en colisión frontal (fractura del salpicadero)", "B) Caída de pie desde un escalón", "C) Estrangulación a lazo"],
                 retoCorrecta: 0,
                 retoFeedback: "¡Excelente correlación biomecánica! La fuerza se transmite desde la rótula a lo largo de la diáfisis femoral hasta impactar la cabeza del fémur contra el acetábulo.",
                 quiz: [
@@ -997,7 +1348,7 @@
                 retoCorrecta: 0,
                 retoFeedback: "¡Muy bien! La aspiración activa de agua en vida inunda los senos paranasales (Signo de Niles/PMCT) y produce hiperinsuflación acuosa pulmonar.",
                 quiz: [
-                    { q: "¿Qué son las 'Manchas de Tardieu' descritas en el síndrome asfíctico?", o: ["Equimosis puntiformes (petequias) subpleurales y subepicárdicas", "Fracturas de las vértebras lumbares", "Quemaduras por electricidad"], a: 0 },
+                    { q: "¿Qué son las Manchas de Tardieu descritas en el síndrome asfíctico?", o: ["Equimosis puntiformes (petequias) subpleurales y subepicárdicas", "Fracturas de las vértebras lumbares", "Quemaduras por electricidad"], a: 0 },
                     { q: "En la estrangulación a lazo, a diferencia de la ahorcadura típica, el surco cervical suele ser:", o: ["Horizontal, completo, uniforme y situado a nivel o por debajo del cartílago tiroides", "Oblicuo ascendente e incompleto", "Ubicado en el tórax inferior"], a: 0 }
                 ]
             },
@@ -1010,7 +1361,7 @@
                 tip: "En niños o adultos con sospecha de sofocación por obstrucción intrínseca de la vía aérea, la radiografía cervical y torácica permite visualizar cuerpos extraños radiopacos alojados en la glotis, tráquea o bronquio principal derecho.",
                 imagen: "img/rx-cervical-latigazo.jpg",
                 retoPregunta: "¿Cuál es la lesión osteoarticular cervical clásica cuando una ahorcadura se produce con caída libre desde altura (ahorcadura judicial)?",
-                retoOpciones: ["A) Espondilolistesis traumática del axis (fractura bipedicular de C2 o 'fractura del ahorcado')", "B) Fractura aislada de la clavícula", "C) Hernia discal lumbar L5-S1"],
+                retoOpciones: ["A) Espondilolistesis traumática del axis (fractura bipedicular de C2 o fractura del ahorcado)", "B) Fractura aislada de la clavícula", "C) Hernia discal lumbar L5-S1"],
                 retoCorrecta: 0,
                 retoFeedback: "¡Exacto! La hiperextensión violenta con distracción brusca del cuello fractura los pedículos de C2 y secciona el bulbo o la médula espinal.",
                 quiz: [
@@ -1026,7 +1377,7 @@
                 pae: "Elaboración de un mapa conceptual sobre las generalidades y topografía lesional en los delitos contra la integridad sexual.",
                 tip: "En el examen pericial de delitos sexuales, el cuerpo se divide en 3 áreas topográficas: Genital, Paragenital (muslos internos, glúteos, pubis) y Extragenital (muñecas, cuello, mamas, rostro por sujeción o defensa).",
                 imagen: "img/rx-trauma-pelvico.jpg",
-                retoPregunta: "¿Qué finalidad médico-legal tienen las lesiones localizadas en la región 'Extragenital' (ej. fracturas falángicas de defensa o marcas de sujeción en muñecas)?",
+                retoPregunta: "¿Qué finalidad médico-legal tienen las lesiones localizadas en la región Extragenital (ej. fracturas falángicas de defensa o marcas de sujeción en muñecas)?",
                 retoOpciones: ["A) Demostrar objetivamente el uso de violencia física, sometimiento y vencimiento de la resistencia de la víctima", "B) Carecen de importancia en el informe", "C) Sustituir la toma de hisopados"],
                 retoCorrecta: 0,
                 retoFeedback: "¡Fundamental! Las lesiones extragenitales y paragenitales prueban materialmente la violencia ejercida para consumar la agresión.",
@@ -1059,10 +1410,12 @@
             {
                 titulo: "Expediente #01: Cadáver masculino, hallado en vía pública con trauma craneal",
                 antecedentes: "Cadáver ingresa en bolsa mortuoria precintada. En cuero cabelludo parietal se palpa defecto circular. No se observa orificio de salida macroscópico.",
-                nivelOptimo: 15,
+                nivelOptimo: 14,
+                focoX: 108,
+                focoY: 36,
                 regionNombre: "Cráneo / Bóveda Parietal-Occipital",
                 imagenBase: "img/tc-craneo-bala.jpg",
-                hallazgoAlerta: "Nivel Craneal (10-25%): Se visualiza defecto óseo circular parietal con bisel interno (Cono truncado) y trazos de fractura radiados.",
+                hallazgoAlerta: "Nivel Craneal (10-22%): Se visualiza defecto óseo circular parietal con bisel interno (Cono truncado de Bonnet) y trazos de fractura radiados.",
                 opcionesDictamen: [
                     "Muerte natural por accidente cerebrovascular isquémico",
                     "Herida por proyectil de arma de fuego con orificio de entrada parietal (Signo de Bonnet)",
@@ -1075,6 +1428,8 @@
                 titulo: "Expediente #02: Cadáver femenino, hallado en domicilio, sospecha de asfixia",
                 antecedentes: "Al examen externo se aprecian estigmas ungueales tenues en región anterior del cuello y congestión facial con petequias conjuntivales.",
                 nivelOptimo: 28,
+                focoX: 100,
+                focoY: 72,
                 regionNombre: "Cuello / Aparato Hioideo-Laríngeo",
                 imagenBase: "img/rx-hioides.jpg",
                 hallazgoAlerta: "Nivel Cervical (22-35%): Solución de continuidad con desplazamiento en el asta mayor del hueso hioides.",
@@ -1090,6 +1445,8 @@
                 titulo: "Expediente #03: Cadáver con herida lineal intercostal derecha",
                 antecedentes: "Presenta solución de continuidad de bordes nítidos y ángulos agudos de 3 cm en cuarto espacio intercostal derecho.",
                 nivelOptimo: 45,
+                focoX: 82,
+                focoY: 138,
                 regionNombre: "Tórax / Cavidad Pleural y Pulmones",
                 imagenBase: "img/rx-neumotorax.jpg",
                 hallazgoAlerta: "Nivel Torácico (38-55%): Hiperclaridad pleural masiva con colapso pulmonar unilateral por entrada de aire a presión.",
@@ -1103,8 +1460,10 @@
             },
             {
                 titulo: "Expediente #04: Peatón hallado en calzada tras impacto vehicular",
-                antecedentes: "Victima de suceso de tránsito terrestre (fuga del conductor). Deformidad evidente en pierna y escoriaciones de arrastre.",
+                antecedentes: "Víctima de suceso de tránsito terrestre (fuga del conductor). Deformidad evidente en pierna y escoriaciones de arrastre.",
                 nivelOptimo: 85,
+                focoX: 79,
+                focoY: 372,
                 regionNombre: "Miembros Inferiores / Diáfisis Tibio-Peronea",
                 imagenBase: "img/rx-tibia-parachoques.jpg",
                 hallazgoAlerta: "Nivel Tibial (75-95%): Fractura en cuña (Triángulo de Messerer) a 42 cm del talón.",
@@ -1211,7 +1570,7 @@
             }
         }
 
-        // --- RENDERIZAR LAS 16 SEMANAS DEL SYLLABUS ---
+        // --- RENDERIZAR LAS 16 SEMANAS DEL SYLLABUS (SIN ERROR DE COMILLAS) ---
         let semanaSeleccionada = 0;
 
         function inicializarSemanas() {
@@ -1270,17 +1629,20 @@
                 </div>
                 <h2 style="margin:12px 0;">${s.titulo}</h2>
 
-                <div style="display:grid; grid-template-columns: 1.4fr 1fr; gap:20px; align-items:center; margin-bottom:20px;">
+                <div style="display:grid; grid-template-columns: 1.35fr 1fr; gap:20px; align-items:center; margin-bottom:20px;">
                     <div>
                         <p style="line-height:1.6;"><strong><i class="fas fa-book"></i> Contenidos del Syllabus:</strong><br>${s.contenido}</p>
                         <p style="line-height:1.6; background:var(--bg); padding:12px; border-radius:8px; border-left:4px solid var(--secondary);">
                             <strong><i class="fas fa-tasks"></i> Trabajo Autónomo / PAE:</strong><br>${s.pae}
                         </p>
                     </div>
-                    <div style="text-align:center; background:#000; padding:10px; border-radius:10px;">
-                        <img src="${s.imagen}" alt="${s.titulo}" style="max-width:100%; max-height:210px; object-fit:contain; border-radius:6px; cursor:pointer;"
-                             onclick="abrirModalZoom('${s.imagen}', 'Semana ${s.semana}: ${s.titulo}', '${s.tip}')">
-                        <small style="display:block; color:#38bdf8; margin-top:6px;"><i class="fas fa-search-plus"></i> Clic en la placa para ampliar</small>
+                    <div class="placa-semana-box" onclick="abrirZoomSemana(${idx})" style="cursor:zoom-in;">
+                        <img src="${s.imagen}" alt="Placa Semana ${s.semana}" style="max-width:100%; max-height:210px; object-fit:contain; border-radius:6px;">
+                        <div style="margin-top:10px;">
+                            <button type="button" class="btn-action" style="background:#00b4d8; color:#000; font-size:0.85em; padding:7px 14px;" onclick="event.stopPropagation(); abrirZoomSemana(${idx});">
+                                <i class="fas fa-search-plus"></i> Clic en la placa para ampliar
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -1307,6 +1669,12 @@
                     <div id="resultado-quiz-semana" style="display:none; margin-top:15px; padding:12px; border-radius:8px; font-weight:bold;"></div>
                 </div>
             `;
+        }
+
+        // Función segura por índice para ampliar cualquier placa semanal sin conflictos de comillas
+        function abrirZoomSemana(idx) {
+            const s = semanasSyllabus[idx];
+            abrirModalSeguro(s.imagen, "Semana " + s.semana + ": " + s.titulo, s.tip);
         }
 
         function verificarRetoSemana(idxSemana, opcionElegida, boton) {
@@ -1350,6 +1718,14 @@
             document.getElementById('virt-antecedentes').innerHTML = `<strong>Antecedentes del Levantamiento:</strong><br>${c.antecedentes}`;
             document.getElementById('virt-img-display').src = c.imagenBase;
             document.getElementById('slider-corte').value = c.nivelOptimo;
+
+            // Posicionar marcador rojo en el esqueleto del Topograma
+            const target = document.getElementById('scout-foco-target');
+            if (target) {
+                target.setAttribute('cx', c.focoX);
+                target.setAttribute('cy', c.focoY);
+            }
+
             moverEscanerVirtuopsia(c.nivelOptimo);
 
             const selectDict = document.getElementById('virt-select-dictamen');
@@ -1367,28 +1743,29 @@
         function moverEscanerVirtuopsia(valor) {
             const idx = parseInt(document.getElementById('select-caso-virt').value);
             const c = casosVirtuopsia[idx];
+            document.getElementById('slider-corte').value = valor;
             document.getElementById('linea-laser').style.top = valor + '%';
-            document.getElementById('label-nivel-corte').textContent = `Nivel: ${valor}%`;
+            document.getElementById('label-nivel-corte').textContent = `Corte Z: ${valor}%`;
 
-            let region = "Miembros Inferiores";
-            if (valor < 22) region = "Cráneo / Encéfalo";
-            else if (valor < 36) region = "Cuello / Hioides / Columna Cervical";
-            else if (valor < 60) region = "Tórax / Parénquima Pulmonar";
-            else if (valor < 75) region = "Abdomen y Anillo Pélvico";
+            let region = "Miembros Inferiores (Tibia / Peroné)";
+            if (valor < 22) region = "Cráneo / Bóveda y Base Craneal";
+            else if (valor < 35) region = "Cuello / Hueso Hioides y C1-C7";
+            else if (valor < 58) region = "Tórax / Cavidad Pleural y Mediastino";
+            else if (valor < 74) region = "Abdomen y Anillo Pélvico";
 
             document.getElementById('virt-hud').innerHTML = `
                 PMCT UCE-FORENSE<br>
-                KV: 120 | mAs: 280 | Corte: ${valor}%<br>
+                KV: 120 | mAs: 280 | Corte Z: ${valor}%<br>
                 Región Explorada: ${region}
             `;
 
             const alerta = document.getElementById('virt-alerta-hallazgo');
-            if (Math.abs(valor - c.nivelOptimo) <= 14) {
+            if (Math.abs(valor - c.nivelOptimo) <= 13) {
                 alerta.style.borderLeftColor = '#00f5d4';
-                alerta.innerHTML = `<strong><i class="fas fa-crosshairs" style="color:#00f5d4;"></i> ¡Foco Lesional Detectado!</strong><br>${c.hallazgoAlerta}`;
+                alerta.innerHTML = `<strong><i class="fas fa-crosshairs" style="color:#00f5d4;"></i> ¡Foco Lesional Enfoque Óptimo!</strong><br>${c.hallazgoAlerta}`;
             } else {
                 alerta.style.borderLeftColor = '#f59e0b';
-                alerta.innerHTML = `<i class="fas fa-info-circle" style="color:#f59e0b;"></i> Explorando ${region}. Desplaza el haz láser hacia la zona anatómica de interés (${c.regionNombre}) para enfocar el indicio principal.`;
+                alerta.innerHTML = `<i class="fas fa-info-circle" style="color:#f59e0b;"></i> Explorando ${region}. Desplaza el haz láser hacia la diana roja en el cuerpo (${c.regionNombre}) para enfocar la evidencia principal.`;
             }
         }
 
@@ -1399,6 +1776,12 @@
             if (tipo === 'osea') img.style.filter = 'contrast(120%) brightness(100%)';
             else if (tipo === 'pulmonar') img.style.filter = 'invert(100%) contrast(130%)';
             else if (tipo === 'metal') img.style.filter = 'contrast(185%) brightness(90%)';
+        }
+
+        function ampliarMonitorVirtuopsia() {
+            const idx = parseInt(document.getElementById('select-caso-virt').value);
+            const c = casosVirtuopsia[idx];
+            abrirModalSeguro(c.imagenBase, c.titulo, c.hallazgoAlerta);
         }
 
         function validarVirtuopsia() {
@@ -1424,7 +1807,7 @@
                 box.style.border = '1px solid #f59e0b';
                 box.innerHTML = `
                     <strong style="color:#facc15;"><i class="fas fa-exclamation-triangle"></i> Diagnóstico Correcto, pero Cadena de Custodia Incompleta</strong><br>
-                    Recuerda marcar los 3 protocolos obligatorios de preservación DICOM antes de firmar la pericia.
+                    Recuerda marcar los 3 protocolos obligatorios de preservación DICOM antes de emitir el dictamen.
                 `;
             } else {
                 box.style.background = 'rgba(217,56,30,0.25)';
@@ -1455,24 +1838,26 @@
             grid.innerHTML = '';
             const lista = filtroCatAtlas === "Todos" ? casosAtlas : casosAtlas.filter(c => c.categoria === filtroCatAtlas);
 
-            lista.forEach(c => {
+            lista.forEach((c) => {
+                const idxReal = casosAtlas.findIndex(item => item.id === c.id);
                 const div = document.createElement('div');
                 div.className = 'card-atlas';
                 div.innerHTML = `
                     <div class="visor-img-wrapper">
                         <img id="atlas-img-${c.id}" src="${c.imagen}" alt="${c.titulo}" data-inv="0"
-                             onclick="abrirModalZoom('${c.imagen}', '${c.titulo}', '${c.hallazgo}')">
+                             onclick="abrirZoomAtlas(${idxReal})">
                     </div>
                     <div class="herramientas-dicom">
                         <label>☀️ <input type="range" min="60" max="150" value="100" oninput="filtrarImgAtlas(${c.id}, this.value, null)"></label>
                         <label>◑ <input type="range" min="60" max="190" value="100" oninput="filtrarImgAtlas(${c.id}, null, this.value)"></label>
                         <button class="btn-acc" onclick="invertirImgAtlas(${c.id})">Invertir</button>
+                        <button class="btn-acc" onclick="abrirZoomAtlas(${idxReal})"><i class="fas fa-expand"></i></button>
                     </div>
                     <div style="padding:18px; flex-grow:1; display:flex; flex-direction:column;">
                         <span style="background:var(--secondary); color:#fff; padding:3px 10px; border-radius:12px; font-size:0.78em; align-self:flex-start;">${c.categoria}</span>
                         <h3 style="margin:10px 0 6px;">${c.titulo}</h3>
                         <p style="font-size:0.92em; margin:0 0 12px;">${c.descripcion}</p>
-                        <button class="btn-action" style="margin-top:auto; background:var(--accent);" onclick="this.nextElementSibling.style.display='block'">
+                        <button class="btn-action" style="margin-top:auto; background:var(--accent); justify-content:center;" onclick="this.nextElementSibling.style.display='block'">
                             <i class="fas fa-eye"></i> Revelar Dictamen
                         </button>
                         <div style="display:none; margin-top:10px; padding:10px; background:var(--bg); border-left:4px solid var(--success); font-size:0.9em;">
@@ -1482,6 +1867,11 @@
                 `;
                 grid.appendChild(div);
             });
+        }
+
+        function abrirZoomAtlas(idx) {
+            const c = casosAtlas[idx];
+            abrirModalSeguro(c.imagen, c.titulo + " (" + c.categoria + ")", c.hallazgo);
         }
 
         function filtrarImgAtlas(id, b, c) {
@@ -1522,8 +1912,8 @@
             });
         }
 
-        // --- MODAL ---
-        function abrirModalZoom(src, titulo, desc) {
+        // --- MODAL UNIVERSAL SEGURO ---
+        function abrirModalSeguro(src, titulo, desc) {
             document.getElementById('modal-zoom-img').src = src;
             document.getElementById('modal-zoom-titulo').textContent = titulo;
             document.getElementById('modal-zoom-desc').textContent = desc;
@@ -1533,11 +1923,17 @@
             document.getElementById('modal-zoom').style.display = 'none';
         }
 
-        // --- INICIO AUTOMÁTICO ---
+        // Cerrar modal con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') cerrarModalZoom();
+        });
+
+        // --- INICIO AUTOMÁTICO DE TODOS LOS MÓDULOS ---
         window.onload = function() {
-            seleccionarTecnicaFMV(0, document.querySelector('.tecnica-card'));
             inicializarSemanas();
             cargarCasoVirtuopsia();
+            mostrarFichaAnatomica(0, document.querySelector('.btn-tec-select'));
+            calcularParametrosUH();
             inicializarAtlas();
             inicializarArticulos();
         };
